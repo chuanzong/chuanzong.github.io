@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html class="ui-mobile">
+	<head>
+    		<title>图解电影</title>
+
+    		<!--        META SECTION-->
+    		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    		<meta name="apple-mobile-web-app-capable" content="yes">
+
+    		<!--        STYLES SECTION -->
+
+    		<link type="text/css" rel="stylesheet" href="http://h5.graphmovie.com/gmspanel/olr/css/jquery.css">
+    		<link type="text/css" rel="stylesheet" href="http://h5.graphmovie.com/gmspanel/olr/css/mainmvlist.css">
+           
+    		<style type="text/css">
+				blockquote p {
+					font-family: 'Times new Roman', serif;
+				}
+				h1 a {
+					font-family: 'Lobster', cursive;
+				}
+				.ui-body-a,  .ui-body-a input,  .ui-body-a select,  .ui-body-a textarea,  .ui-body-a button,  .ui-btn-up-a,  .ui-btn-hover-a,  .ui-btn-down-a,  .ui-btn-active,  textarea,  p,  a,  h2,  h3,  h4,  h5,  h6,  span,  .ui-bar-a,  .ui-bar-a input,  .ui-bar-a select,  .ui-bar-a textarea,  .ui-bar-a button {
+					font-family: 'Arial', sans-serif;
+				}
+				.pick-button.blue {
+					background: #00b6ff; 
+					border:none; 
+				}
+				.pick-button {
+					border-radius: 5px 5px 5px 5px;
+					color: #FFFFFF;
+					font-weight: bold;
+					line-height: 25px;
+					
+					overflow: hidden;
+					position: relative;
+					text-align: center;
+					/*text-shadow: 1px 1px 1px #333333;*/
+					border-bottom: 3px solid #0087bd !important;
+					font-size:1.0em !important;
+				}
+			</style>
+			<link href="http://h5.graphmovie.com/gmspanel/olr/css/css.css" rel="stylesheet" type="text/css">
+			<style>
+				.section-image-aboutus {box-shadow:none;}
+				.movie_sort_box {min-width:320px;max-width:640px;margin:0 auto;border:0;line-height:51px;height:52px;}
+				.movie_sort_tab_unsel {font-weight:normal;color:#282832;font-size:.9em;}
+				.movie_sort_tab_sel {font-weight:normal;color:#00b9ff;font-size:.9em;}
+				.movie_sort_tab1,.movie_sort_tab2,.movie_sort_tab3 {float:left;width:33.3%;cursor:pointer;}
+				.mainIMG {border-radius:0;}
+				#comments div, #blog article, .noImageArticle, .section-image-aboutus, #blog-single article{
+					border-bottom:0px;
+					border-bottom: 0px solid #ddd !important;
+					border-radius:0;
+				}
+				.download_logo {position:absolute;}
+				.download_title {position:absolute;right:5px;}
+				.movie_grapher_box {background-color:#fff; border-top:1px solid #e4e2e2;margin: 0 10px;padding:6px 0;}
+				
+				.article-wrapper {padding:10px;}
+				.movie_name {color:#282832;font-weight:normal;font-size:1em !important;}
+				.movie_type {color:#98989b;}
+				.movie_subtitle {color:#98989b;font-size:.8em;margin-bottom:4px;margin-top:12px;}
+				.movie_grapher_avatar {margin-top:6px;}
+				.movie_grapher {padding-left: 0px;}
+				.movie_grapher_name {color:#98989b;font-size:.8em;margin-left: 5px;}
+				.movie_grapher_avatar img {width:15px;height:15px;}
+				.movie_readdata_read_box {margin-right:0;width:auto;}
+				.movie_readdata_read_num {color:#98989b;}
+				.movie_readdata_read_icon img ,.movie_readdata_like_icon img{
+				    float: left;
+				    margin-top: 2px;
+				}
+				.movie_readdata_like_box {margin-right:0;width:auto;}
+				.movie_readdata_like_num {color:#98989b;}
+				@media only screen and (min-width:1024px){
+					.download_logo img {
+					    height: 40px;
+					    padding-top: 25px;
+					}
+					.download_title {
+						line-height:90px;font-size:1.4em;right:10px;
+					}
+				}
+			</style>
+            
+    </head>
+    <body class="home blog ui-mobile-viewport">	
+    	<!--min-height: 595px;-->
+		<div style="" class="ui-page ui-body-c ui-page-active" tabindex="0" data-url="/themes/breathe_wp/HTML/ORANGE/" data-role="page"> 
+          
+        <!--            Header -->
+        <header role="banner" class="ui-header ui-bar-a" data-role="header" style=" display:block; position:fixed; top:0px; width:100%; z-index:9999; text-align:center;">
+    		<div class="download_box" onClick="">
+            	<div class="download_logo">
+                	<img src="http://avatar.graphmovie.com/gmspanel/olr/images/applogo.png"/>
+                </div>
+                <div class="download_title">
+                	<!--
+                	<button class="pick-button blue" onclick="javascript:alert('Download!!');">
+						<span>下载手机图解电影</span>
+					</button>
+                    -->
+                    10分钟品味一部电影
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            
+            <div class="movie_sort_box">
+            	<div class="movie_sort_tab1" id="movie_sort_tab1" onClick="javascript:cksortmovies('0');">
+                	<span class="movie_sort_tab_unsel">最 新</span>
+                </div>
+<!--                 <div class="movie_sort_line1"></div> -->
+                <div class="movie_sort_tab2" id="movie_sort_tab2" onClick="javascript:cksortmovies('1');">
+                	<span class="movie_sort_tab_unsel">最 热</span>
+                </div>
+<!--                 <div class="movie_sort_line2"></div> -->
+                <div class="movie_sort_tab3" id="movie_sort_tab3" onClick="javascript:cksortmovies('3');">
+                	<span class="movie_sort_tab_unsel">热 评</span>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+    		
+  		</header>
+        
+        <section role="main" data-role="content" class="wrappedWidth ui-content" id="index" style="padding-top:100px;">
+            
+        </section>
+        <div id="ck_load" class="movie_loading_more" onClick="javascript:loadmovies(window.selsort,0);">-点击加载更多-</div>
+        <div id="loading" class="movie_loading_more">_(:з」∠)_嘿咻嘿咻...卖力加载中...</div>
+    	<div id="nomoreresults" class="movie_loading_more">(●'◡'●)ﾉ♥ 木有更多啦！</div>
+	</div>
+	<!--     Page initialization    END  -->
+    
+    
+
+	<div style="top: 297.5px;" class="ui-loader ui-body-a ui-corner-all">
+    	<span class="ui-icon ui-icon-loading spin"></span>
+		<h1>loading</h1>
+	</div>
+
+    <script type="text/javascript" src="http://h5.graphmovie.com/gmspanel/olr/js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="http://h5.graphmovie.com/gmspanel/olr/js/jquery.blockUI.js"></script>
+    <!-- <script type="text/javascript" src="http://h5.graphmovie.com/gmspanel/olr/js/jquery.loadmore.1.2.js?p=web&c=woshop&v=1"></script> -->
+    <!-- <script type="text/javascript" src="js/jquery.loadmore.1.2.js?p=web&c=woshop&v=1"></script> -->
+
+    <!-- <script type="text/javascript" src="js/loading.js?p=web&c=woshop&v=1"></script> -->
+
+    <script>
+		// $(function(){
+			console.log(123)
+
+			var pub_platform = 'web';
+			var pub_channel = 'woshop';
+			var ver = '1';
+
+			window.skip = 0;
+			window.basetime = '';
+			window.selsort = '0';
+
+			var uurl = "http://h5.graphmovie.com/gmspanel/interface/zh-cn/3.1/M_MainMvList.php"
+			// var param = "userid=0&pub_platform=web&pub_channel=woshop&ver=1&tag=0&showtime=0&zone=0&sort=0&skip=0&base_time="
+
+
+		function loadmovies(sort_type, clean){
+
+			$("#ck_load").hide(200);
+			$("#loading").show(200);
+			$("#nomoreresults").hide(200)
+		setTimeout(function(){
+
+			var param= {
+				"userid": '0',
+				"pub_platform": 'web',
+				"pub_channel": 'woshop',
+				"ver": '1',
+				"tag": '0',
+				"showtime": '0',
+				"zone": '0',
+				"sort": sort_type,	//sort_type 0最新,1最热，3热评
+				"skip": window.skip,	//追加的条数20递增
+				"base_time":window.basetime
+			}
+			$.post("Curl_post.php?murl="+uurl,param,function(data){
+				// console.log(data)
+				// data = data.replace(/\\u/gi, "%u");  
+				// document.body.innerHTML = unescape(data);
+				console.log(data)
+
+				if (data.status == 1) {
+
+					// 清空clean 1删除内容,0追加
+					// if (clean == 1 && data.movies.length > 0) {
+					// 	$('#index').html('');
+					// 	scroll(0, 0)
+					// }
+					for (var i = 0; i < data.movies.length; i++) {
+						var cellcover = '';
+						if (data.movies[i].jian == '0') {
+							cellcover = ''
+						} else if (data.movies[i].jian == '1') {
+							cellcover = '<div class="movie_cover"><img tittle="略屌" src="http://avatar.graphmovie.com/gmspanel/olr/images/celltag_1.png"/></div>'
+						} else if (data.movies[i].jian == '2') {
+							cellcover = '<div class="movie_cover"><img tittle="震惊" src="http://avatar.graphmovie.com/gmspanel/olr/images/celltag_2.png"/></div>'
+						} else if (data.movies[i].jian == '3') {
+							cellcover = '<div class="movie_cover"><img tittle="神作" src="http://avatar.graphmovie.com/gmspanel/olr/images/celltag_3.png"/></div>'
+						}
+						var grapher_name = '图解电影';
+						if (data.movies[i].user.length > 0) {
+							grapher_name = data.movies[i].user[0].name
+						}
+						$('#index').append('<section class="section-image-aboutus" onClick="javascript:moviemsg(\'' 
+										+ data.movies[i].or_key 
+										+ '\');"><article class="noMarginTop"><div class="headlineWrapper">' 
+										+ cellcover 
+										+ '<img class="mainIMG" src="' 
+										+ data.movies[i].spic 
+										+ '"></div><div class="article-wrapper"><div class="movie_msg_box"><div class="movie_name">' 
+										+ data.movies[i].name 
+										+ '</div><div class="movie_type">' 
+										+ data.movies[i].tag_str 
+										+ '</div><div style="clear:both;"></div></div><div class="movie_subtitle">' 
+										+ data.movies[i].sub_title 
+										+ '</div></div><div class="movie_grapher_box"><div class="movie_grapher"><div class="movie_grapher_avatar"><img src="http://avatar.graphmovie.com/gmspanel/olr/images/mvcell_icon_user.png" /></div><div class="movie_grapher_name">' 
+										+ grapher_name 
+										+ '</div><div style="clear:both;"></div></div><div class="movie_readdata_box"><div class="movie_readdata_read_box"><div class="movie_readdata_read_num">' 
+										+ data.movies[i].readdata.played 
+										+ '</div><div class="movie_readdata_read_icon"><img src="http://avatar.graphmovie.com/gmspanel/olr/images/mvcell_icon_see.png"/></div><div style="clear:both;"></div></div><div class="movie_readdata_like_box"><div class="movie_readdata_like_num">' 
+										+ data.movies[i].readdata.ding 
+										+ '</div><div class="movie_readdata_like_icon"><img src="http://avatar.graphmovie.com/gmspanel/olr/images/mvcell_icon_like.png"/></div><div style="clear:both;"></div></div><div style="clear:both;"></div></div><div style="clear:both;"></div></div></article></section>');
+						window.skip++;
+						// sort_type 0最新,1最热，3热评
+						if (sort_type == '0') {
+							window.basetime = data.movies[i].online_time
+						}
+					}
+
+					if (data.movies.length > 0) {
+						$("#loading").hide(200);
+						$("#nomoreresults").hide(200);
+						$("#ck_load").show(200)
+					} else {
+						$("#ck_load").hide(200);
+						$("#loading").hide(200);
+						$("#nomoreresults").show(200)
+					}
+				}
+				console.log(window.skip)
+
+			},'json')
+
+		},500)
+
+		}
+
+		loadmovies(0);
+
+		function moviemsg(movieid) {
+			// window.location.href = 'detail.php?p=' + pub_platform + '&c=' + pub_channel + '&v=' + ver + '&k=' + movieid
+			window.location.href = 'http://h5.graphmovie.com/gmspanel/olr/detail.php?p=web&c=woshop&v=1&k=' + movieid
+		}
+
+		// })
+    </script>
+
+
+    
+    
+</body>
+</html>
