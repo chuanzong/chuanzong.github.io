@@ -11,8 +11,8 @@
 
     		<!--        STYLES SECTION -->
 
-    		<link type="text/css" rel="stylesheet" href="https://h5.graphmovie.com/gmspanel/olr/css/jquery.css">
-    		<link type="text/css" rel="stylesheet" href="https://h5.graphmovie.com/gmspanel/olr/css/mainmvlist.css">
+    		<link type="text/css" rel="stylesheet" href="http://h5.graphmovie.com/gmspanel/olr/css/jquery.css">
+    		<link type="text/css" rel="stylesheet" href="http://h5.graphmovie.com/gmspanel/olr/css/mainmvlist.css">
            
     		<style type="text/css">
 				blockquote p {
@@ -42,7 +42,7 @@
 					font-size:1.0em !important;
 				}
 			</style>
-			<link href="https://h5.graphmovie.com/gmspanel/olr/css/css.css" rel="stylesheet" type="text/css">
+			<link href="http://h5.graphmovie.com/gmspanel/olr/css/css.css" rel="stylesheet" type="text/css">
 			<style>
 				.section-image-aboutus {box-shadow:none;}
 				.movie_sort_box {min-width:320px;max-width:640px;margin:0 auto;border:0;line-height:51px;height:52px;}
@@ -95,7 +95,7 @@
         <header role="banner" class="ui-header ui-bar-a" data-role="header" style=" display:block; position:fixed; top:0px; width:100%; z-index:9999; text-align:center;">
     		<div class="download_box" onClick="">
             	<div class="download_logo">
-                	<img src="https://avatar.graphmovie.com/gmspanel/olr/images/applogo.png"/>
+                	<img src="http://avatar.graphmovie.com/gmspanel/olr/images/applogo.png"/>
                 </div>
                 <div class="download_title">
                 	<!--
@@ -141,9 +141,11 @@
 		<h1>loading</h1>
 	</div>
 
-    <script type="text/javascript" src="https://h5.graphmovie.com/gmspanel/olr/js/jquery-1.10.1.min.js"></script>
-	<script type="text/javascript" src="https://h5.graphmovie.com/gmspanel/olr/js/jquery.blockUI.js"></script>
-    <!-- <script type="text/javascript" src="https://h5.graphmovie.com/gmspanel/olr/js/jquery.loadmore.1.2.js?p=web&c=woshop&v=1"></script> -->
+    <script type="text/javascript" src="http://h5.graphmovie.com/gmspanel/olr/js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="http://h5.graphmovie.com/gmspanel/olr/js/jquery.blockUI.js"></script>
+	<script src="https://www.shucunwang.com/RunCode/bower/js-base64/base64.min.js"></script>
+
+    <!-- <script type="text/javascript" src="http://h5.graphmovie.com/gmspanel/olr/js/jquery.loadmore.1.2.js?p=web&c=woshop&v=1"></script> -->
     <!-- <script type="text/javascript" src="js/jquery.loadmore.1.2.js?p=web&c=woshop&v=1"></script> -->
 
     <!-- <script type="text/javascript" src="js/loading.js?p=web&c=woshop&v=1"></script> -->
@@ -160,7 +162,7 @@
 			window.basetime = '';
 			window.selsort = '0';
 
-			var uurl = "https://h5.graphmovie.com/gmspanel/interface/zh-cn/3.1/M_MainMvList.php"
+			var uurl = "http://h5.graphmovie.com/gmspanel/interface/zh-cn/3.1/M_MainMvList.php"
 			// var param = "userid=0&pub_platform=web&pub_channel=woshop&ver=1&tag=0&showtime=0&zone=0&sort=0&skip=0&base_time="
 
 
@@ -171,7 +173,7 @@
 			$("#nomoreresults").hide(200)
 		setTimeout(function(){
 
-			var param= {
+			/*var param= {
 				"userid": '0',
 				"pub_platform": 'web',
 				"pub_channel": 'woshop',
@@ -183,10 +185,21 @@
 				"skip": window.skip,	//追加的条数20递增
 				"base_time":window.basetime
 			}
-			$.post("Curl_post.php?murl="+uurl,param,function(data){
-				// console.log(data)
-				// data = data.replace(/\\u/gi, "%u");  
-				// document.body.innerHTML = unescape(data);
+			$.post("Curl_post.php?murl="+uurl,param,function(data){*/
+
+			var ccode = '<?php function request_by_curl($remote_server, $post_string) {$ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $remote_server); curl_setopt($ch, CURLOPT_POSTFIELDS, $post_string); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); $data = curl_exec($ch); curl_close($ch); return $data; }'
+			+'$post_string = "userid=0&pub_platform=web&pub_channel=woshop&ver=1&tag=0&showtime=0&zone=0&sort='+sort_type+'&skip='+window.skip+'&base_time='+window.basetime+'";'
+			+'$mres = request_by_curl("http://h5.graphmovie.com/gmspanel/interface/zh-cn/3.1/M_MainMvList.php", $post_string);echo $mres;'
+			var accode = Base64.encode(ccode);
+			var json = {
+			        language: 15,
+			        code: accode,
+			        stdin: 123
+			    };
+
+			$.post("https://www.shucunwang.com/compile2", json, function(mdata, error, xhr) {
+			    var data = eval("("+mdata.output+")")				   
+
 				console.log(data)
 
 				if (data.status == 1) {
@@ -201,11 +214,11 @@
 						if (data.movies[i].jian == '0') {
 							cellcover = ''
 						} else if (data.movies[i].jian == '1') {
-							cellcover = '<div class="movie_cover"><img tittle="略屌" src="https://avatar.graphmovie.com/gmspanel/olr/images/celltag_1.png"/></div>'
+							cellcover = '<div class="movie_cover"><img tittle="略屌" src="http://avatar.graphmovie.com/gmspanel/olr/images/celltag_1.png"/></div>'
 						} else if (data.movies[i].jian == '2') {
-							cellcover = '<div class="movie_cover"><img tittle="震惊" src="https://avatar.graphmovie.com/gmspanel/olr/images/celltag_2.png"/></div>'
+							cellcover = '<div class="movie_cover"><img tittle="震惊" src="http://avatar.graphmovie.com/gmspanel/olr/images/celltag_2.png"/></div>'
 						} else if (data.movies[i].jian == '3') {
-							cellcover = '<div class="movie_cover"><img tittle="神作" src="https://avatar.graphmovie.com/gmspanel/olr/images/celltag_3.png"/></div>'
+							cellcover = '<div class="movie_cover"><img tittle="神作" src="http://avatar.graphmovie.com/gmspanel/olr/images/celltag_3.png"/></div>'
 						}
 						var grapher_name = '图解电影';
 						if (data.movies[i].user.length > 0) {
@@ -223,13 +236,13 @@
 										+ data.movies[i].tag_str 
 										+ '</div><div style="clear:both;"></div></div><div class="movie_subtitle">' 
 										+ data.movies[i].sub_title 
-										+ '</div></div><div class="movie_grapher_box"><div class="movie_grapher"><div class="movie_grapher_avatar"><img src="https://avatar.graphmovie.com/gmspanel/olr/images/mvcell_icon_user.png" /></div><div class="movie_grapher_name">' 
+										+ '</div></div><div class="movie_grapher_box"><div class="movie_grapher"><div class="movie_grapher_avatar"><img src="http://avatar.graphmovie.com/gmspanel/olr/images/mvcell_icon_user.png" /></div><div class="movie_grapher_name">' 
 										+ grapher_name 
 										+ '</div><div style="clear:both;"></div></div><div class="movie_readdata_box"><div class="movie_readdata_read_box"><div class="movie_readdata_read_num">' 
 										+ data.movies[i].readdata.played 
-										+ '</div><div class="movie_readdata_read_icon"><img src="https://avatar.graphmovie.com/gmspanel/olr/images/mvcell_icon_see.png"/></div><div style="clear:both;"></div></div><div class="movie_readdata_like_box"><div class="movie_readdata_like_num">' 
+										+ '</div><div class="movie_readdata_read_icon"><img src="http://avatar.graphmovie.com/gmspanel/olr/images/mvcell_icon_see.png"/></div><div style="clear:both;"></div></div><div class="movie_readdata_like_box"><div class="movie_readdata_like_num">' 
 										+ data.movies[i].readdata.ding 
-										+ '</div><div class="movie_readdata_like_icon"><img src="https://avatar.graphmovie.com/gmspanel/olr/images/mvcell_icon_like.png"/></div><div style="clear:both;"></div></div><div style="clear:both;"></div></div><div style="clear:both;"></div></div></article></section>');
+										+ '</div><div class="movie_readdata_like_icon"><img src="http://avatar.graphmovie.com/gmspanel/olr/images/mvcell_icon_like.png"/></div><div style="clear:both;"></div></div><div style="clear:both;"></div></div><div style="clear:both;"></div></div></article></section>');
 						window.skip++;
 						// sort_type 0最新,1最热，3热评
 						if (sort_type == '0') {
@@ -259,7 +272,8 @@
 
 		function moviemsg(movieid) {
 			// window.location.href = 'detail.php?p=' + pub_platform + '&c=' + pub_channel + '&v=' + ver + '&k=' + movieid
-			window.location.href = 'https://h5.graphmovie.com/gmspanel/olr/detail.php?p=web&c=woshop&v=1&k=' + movieid
+			// window.location.href = 'http://h5.graphmovie.com/gmspanel/olr/detail.php?p=web&c=woshop&v=1&k=' + movieid
+			window.open('http://h5.graphmovie.com/gmspanel/olr/detail.php?p=web&c=woshop&v=1&k=' + movieid)
 		}
 
 		// })
