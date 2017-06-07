@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<link href="http://qiqu.uc.cn/qiqu/2.12.7/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<title>UC奇趣百科 - 一贱你就笑</title>
+	<link rel="stylesheet" href="st.css">
+</head>
+<body>
+<div class="list_listPage">
+	<div class="list">
+		<div data-group="0" data-show="1" style="min-height: 0px;">
+			<div class="it i-changwen js-enter" data-ckrg="长内容" data-ckpo="浏览" data-gi="0" data-ii="0">
+				<div class="changwen-wrap">
+					<img class="changwen-cover galleryLink" src="http://image.uc.cn/s/uae/g/0q/product/rl/v3/daily_rl_2.jpg">
+					<div class="changwen-rightCont">
+						<p class="changwen-title"> 每日排行榜 </p>
+						<p class="changwen-desc"> 2017-04-25 </p>
+					</div>
+				</div>
+				<div class="lI-meta">
+					<div class="lI-metaItem lI-opinion js-biaotai lI-opinion_noShare" data-ckrg="评论"
+					data-ckpo="列表页表态入口" data-feeb="1">
+						<i class="lI-metaIco sprite js-biaotai"> </i>
+						<span class="js-biaotai"> 212 </span>
+					</div>
+					<div class="lI-metaItem lI-metaItem_comment js-cm" data-feeb="1" data-ckrg="评论"
+					data-ckpo="列表页评论入口">
+						<i class="lI-metaIco sprite js-cm"> </i>
+						<span class="js-cm"> 17 </span>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- display: none; -->
+<div class="appendMsg" style=""><i class="spin"></i>正在疯狂加载...</div>
+
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+
+	$(function(){ 
+	
+		var mdata = new Date(),
+			mtime = mdata.getFullYear()+"-"+(mdata.getMonth()+1)+"-"+mdata.getDate()+" "+mdata.getHours+":"+mdata.getMinutes+":00";
+ // 2017-6-05 10:42:00
+		var aj = !1;
+			group = 0,
+			page = 1,
+			nGrop = 0,
+			gotdata =[];
+
+		var mparam ={
+			_app_id:"hottopic",
+			_size:10,
+			_sort:"_lists.score:desc",
+			_fetch:1,
+			_fetch_incrs:1,
+			_lists:"_lists.list_id:daily_rl AND _lists.category_id:ranking_list",
+			_select:"title,tag,desc,cover,list_name,media_data,comment_total,post_type",
+			_objects:'active_time:[* TO "'+mtime+'"] OR _missing_:active_time',
+			_page:page
+		} 
+		// alert(mtime)
+		// alert(navigator.userAgent)
+		$(".list").empty();
+		function listAdd(){
+			mparam._page = page;
+			$.get('http://napi.uc.cn/3/classes/topic/search',mparam,function(da){
+				// console.log(da.data)
+				gotdata.push(da.data)
+				createList(da.data)
+
+			})			
+		}
+		// 生成list列表
+		function createList(da){
+			var lis = shengHtml(da)
+			var liss = '<div data-group="'+group+'" data-show="1" style="">'+lis+ '</div>'
+			$(".list").append(liss);
+			creatAdd();
+			group +=1;
+			page += 1;
+			aj =!aj;
+			// console.log(gotdata)
+		}
+		// 生成html块
+		function shengHtml(da,ogroup){
+			var lis ="";
+			ogroup= ogroup?ogroup:group;
+			for(var i in da){
+				lis += 	'<div class="it i-changwen js-enter" data-ckrg="长内容" data-ckpo="浏览" data-gi="'+ogroup+'" data-ii="'+i+'">'
+							+'	<div class="changwen-wrap">'
+							+'		<img class="changwen-cover galleryLink" src="'+da[i].cover+'">'
+							+'		<div class="changwen-rightCont">'
+							+'			<p class="changwen-title"> '+da[i].title+'</p>'
+							+'			<p class="changwen-desc"> '+da[i].desc+'</p>'
+							+'		</div>'
+							+'	</div>'
+							+'	<div class="lI-meta">'
+							+'		<div class="lI-metaItem lI-opinion js-biaotai lI-opinion_noShare" data-ckrg="评论"'
+							+'		data-ckpo="列表页表态入口" data-feeb="1">'
+							+'			<i class="lI-metaIco sprite js-biaotai"> </i>'
+							+'			<span class="js-biaotai">'+(1*da[i]._incrs.ai+1*da[i]._incrs.diao+1*da[i]._incrs.jian+1*da[i]._incrs.keng)+'</span>'
+							+'		</div>'
+							+'		<div class="lI-metaItem lI-metaItem_comment js-cm" data-feeb="1" data-ckrg="评论"'
+							+'		data-ckpo="列表页评论入口">'
+							+'			<i class="lI-metaIco sprite js-cm"> </i>'
+							+'			<span class="js-cm">'+da[i].comment_total+'</span>'
+							+'		</div>'
+							+'	</div>'
+							+'</div>'
+			}
+			return lis;
+		}
+		// 添加滚动监听事件
+		function creatAdd(){
+			$(".appendMsg").hide();
+			$(window).off("scroll",winScroll)
+			$(window).on("scroll",winScroll)
+		}
+		function winScroll(){
+			if(($("body").scrollTop()+$("html").height())>($("body").height()-100)&&aj){
+				aj =!aj;
+				$(".appendMsg").show();
+				setTimeout(listAdd,1000)
+			}
+			groupShow()
+		}
+		// 控制list中html块
+		function groupShow(){
+			var nowG = Math.floor($("body").scrollTop()/1510)
+			// console.log(nowG)
+			if(nowG!==nGrop){
+				nGrop = nowG
+				// console.log(nGrop)
+				if($("div[data-group]").length>2){
+					$("div[data-group]").each(function(i, n){
+						if(i<nowG-1||i>nowG+1){
+							$(this).empty().attr("data-show","0").css("min-height","1510px");
+						}else{							
+							$(this).html(shengHtml(gotdata[$(this).attr("data-group")],$(this).attr("data-group"))).attr("data-show","1").css("min-height","0px");
+						}
+					})
+				}
+			}
+		}
+
+
+
+		listAdd();
+	})
+
+	// 点击跳转
+	$(function(){
+		$(".list").on("click",".i-changwen",itemClick)
+		function itemClick(){
+			// console.log($(this).attr("data-gi"),$(this).attr("data-ii"))
+			// console.log($(this).attr("data-gi"),$(this).attr("data-ii"))
+			console.log(gotdata[$(this).attr("data-gi")][$(this).attr("data-ii")]._id)
+			window.open('./deta2.html?deta='+gotdata[$(this).attr("data-gi")][$(this).attr("data-ii")]._id)
+			// detailData(gotdata[$(this).attr("data-gi")][$(this).attr("data-ii")]._id)
+		}
+
+		function detailData(iid){
+			var durl = "http://napi.uc.cn/3/classes/topic/objects/"
+			var dparam = {
+				_app_id:"hottopic",
+				_fetch:"1",
+				_fetch_incrs:"1",
+				_select:"title,desc,rl_tuwen,rl_joke,rl_shentucao,media_data",
+				}
+			$.get(durl+iid,dparam,function(da){
+				console.log(da)
+			})
+		}
+	})
+
+	</script>
+</body>
+</html>
