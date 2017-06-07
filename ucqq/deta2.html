@@ -44,7 +44,7 @@
 
 				</div>
 				<!-- 表态 -->
-				<div class="cw-opinion">
+				<div class="cw-opinion hide">
 					<p class="cw-incrs-tip cw-incrs-tip-transition" style="display: none;">
 						奇葩年年有，今年特别多!
 					</p>
@@ -248,6 +248,7 @@ function detailData(iid){
 		addHtml_tuwen(da.data.rl_tuwen)
 		addHtml_joke(da.data.rl_joke)
 		addHtml_shentucao(da.data.rl_shentucao)
+		$(".cw-opinion").removeClass("hide")
 	})
 }
 
