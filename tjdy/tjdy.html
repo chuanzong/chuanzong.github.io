@@ -135,6 +135,7 @@
         <div id="ck_load" class="movie_loading_more" onClick="javascript:loadmovies(window.selsort,0);">-点击加载更多-</div>
         <div id="loading" class="movie_loading_more">_(:з」∠)_嘿咻嘿咻...卖力加载中...</div>
     	<div id="nomoreresults" class="movie_loading_more">(●'◡'●)ﾉ♥ 木有更多啦！</div>
+    	<div style="position: absolute; bottom: 2px;width: 100%;text-align: center; "> <a href="http://www.dooccn.com" target="_blank" style="color: #ccc !important;">在线代码运行支持 ：http://www.dooccn.com</a></div>
 	</div>
 	<!--     Page initialization    END  -->
     
@@ -203,7 +204,11 @@
 			    };
 
 			$.post("https://www.shucunwang.com/compile2", json, function(mdata, error, xhr) {
-			    var data = eval("("+mdata.output+")")				   
+				if(error){console.log(error)}
+					console.log(error,mdata)
+				mdata.output = mdata.output.replace("官方网站:http://www.dooccn.com","")
+			    var data = eval("("+mdata.output+")")
+			    // var data =	mdata.output;		   
 
 				console.log(data)
 
