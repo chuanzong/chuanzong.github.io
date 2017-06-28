@@ -292,6 +292,7 @@
 					,error:function(err){
 						if(err.statusText=="timeout"){
 						 	huoqudata_html()
+						 	return;
 						}
 						console.log("网路错误9001",err)
 						$("#loading").html("!!!∑(ﾟДﾟノ)ノ 网路错误 90"+err.status)
