@@ -210,7 +210,7 @@
 				   url: "https://www.shucunwang.com/compile2",
 				   data: json,
 				   dataType:"json",
-				   timeout:"3000",
+				   timeout:"4000",
 				   success: function(mdata){
 						console.log(arguments)
 						
@@ -290,7 +290,11 @@
 						}
 					}
 					,error:function(err){
+						if(err.statusText=="timeout"){
+						 	huoqudata_html()
+						}
 						console.log("网路错误9001",err)
+						$("#loading").html("!!!∑(ﾟДﾟノ)ノ 网路错误 90"+err.status)
 						 // huoqudata_html()						
 					}
 
