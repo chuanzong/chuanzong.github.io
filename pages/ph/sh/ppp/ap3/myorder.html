@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>优惠商城</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript"> 
+        !function(J){function H(){var d=E.getBoundingClientRect().width;var e=(d/7.5>100*B?100*B:(d/7.5<42?42:d/7.5));E.style.fontSize=e+"px",J.rem=e}var G,F=J.document,E=F.documentElement,D=F.querySelector('meta[name="viewport"]'),B=0,A=0;if(D){var y=D.getAttribute("content").match(/initial\-scale=([\d\.]+)/);y&&(A=parseFloat(y[1]),B=parseInt(1/A))}if(!B&&!A){var u=(J.navigator.appVersion.match(/android/gi),J.navigator.appVersion.match(/iphone/gi)),t=J.devicePixelRatio;B=u?t>=3&&(!B||B>=3)?3:t>=2&&(!B||B>=2)?2:1:1,A=1/B}if(E.setAttribute("data-dpr",B),!D){if(D=F.createElement("meta"),D.setAttribute("name","viewport"),D.setAttribute("content","initial-scale="+A+", maximum-scale="+A+", minimum-scale="+A+", user-scalable=no"),E.firstElementChild){E.firstElementChild.appendChild(D)}else{var s=F.createElement("div");s.appendChild(D),F.write(s.innerHTML)}}J.addEventListener("resize",function(){clearTimeout(G),G=setTimeout(H,300)},!1),J.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(G),G=setTimeout(H,300))},!1),H()}(window);
+        if (typeof(M) == 'undefined' || !M){
+            window.M = {};
+        }
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav header">
+	    <a class="mui-action-back mui-icon mui-pull-left" href=""><i class="iconfont">&#xe602;</i></a>
+	    <h1 class="mui-title">我的订单</h1>
+	    <a class="mui-action-back mui-icon mui-pull-right" href="search.html"><i class="iconfont">&#xe603;</i></a>
+	</header>
+	<div class="mui-content">
+		<ul class="order-meun">
+			<li class="current">
+				<a href="">
+					<i class="iconfont">&#xe623;</i>
+					<p>全部</p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<i class="iconfont">&#xe62b;</i>
+					<p>待付款</p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<i class="iconfont">&#xe61f;</i>
+					<p>待发货</p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<i class="iconfont">&#xe64d;</i>
+					<p>待收货</p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<i class="iconfont">&#xe644;</i>
+					<p>待评价</p>
+				</a>
+			</li>
+		</ul>
+		<div class="h10"></div>
+		<ul class="product">
+			<li>
+				<h2><span class="fl">2016-08-28</span><i class="fr">已发货</i></h2>
+				<div class="p-one">
+					<a href="">
+						<div class="p-one-pic"><img src="images/qcp.png"/></div>
+						<div class="p-one-text">
+							好孩子面朝大海系列双肩包55062MINI号
+						</div>
+						<div class="p-one-price">
+							<span>￥80.00</span>
+							<p>X1</p>
+						</div>
+					</a>
+				</div>
+				<div class="p-two">
+					<div class="price fl">合计：<span>￥80.00</span></div>
+					<div class="btn fr">
+						<a href="" class="fr honse">确认收货</a>
+						<a href="" class="fr baise">订单查询</a>
+					</div>
+				</div>
+			</li>
+			<div class="h10"></div>
+			<li>
+				<h2><span class="fl">2016-08-28</span><i class="fr">交易完成</i></h2>
+				<div class="p-one">
+					<a href="">
+						<div class="p-one-pic"><img src="images/qcp.png"/></div>
+						<div class="p-one-text">
+							好孩子面朝大海系列双肩包55062MINI号
+						</div>
+						<div class="p-one-price">
+							<span>￥80.00</span>
+							<p>X1</p>
+						</div>
+					</a>
+				</div>
+				<div class="p-two">
+					<div class="price fl">合计：<span>￥80.00</span></div>
+					<div class="btn fr">
+		                <a href="" class="fr baise">评价</a>
+						<a href="" class="fr baise">订单查询</a>
+						<a href="" class="fr baise">删除订单</a>
+					</div>
+				</div>
+			</li>
+			<div class="h10"></div>
+		</ul>
+	</div>
+	<!--底部导航-->
+	<div class="jl"></div>
+	<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item" href="index.html">
+		        <span class="mui-icon "><i class="iconfont">&#xe601;</i></span>
+		        <span class="mui-tab-label">优惠</span>
+		    </a>
+		    <a class="mui-tab-item" href="hot.html">
+		        <span class="mui-icon"><i class="iconfont">&#xe626;</i></span>
+		        <span class="mui-tab-label">热寻</span>
+		    </a>
+		    <a class="mui-tab-item" href="salse.html">
+		        <span class="mui-icon"><i class="iconfont">&#xe62f;</i></span>
+		        <span class="mui-tab-label">清仓</span>
+		    </a>
+		    <a class="mui-tab-item  mui-active" href="shopcar.html">
+		        <span class="mui-icon"><i class="iconfont">&#xe600;</i></span>
+		        <span class="mui-tab-label">购物车</span>
+		    </a>
+		    <a class="mui-tab-item" href="member.html">
+		        <span class="mui-icon"><i class="iconfont">&#xe654;</i></span>
+		        <span class="mui-tab-label">我的</span>
+		    </a>
+		</nav>
+		<script>
+			mui('body').on('tap','a',function(){
+			    window.top.location.href=this.href;
+			});
+		</script>
+</body>
+</html>

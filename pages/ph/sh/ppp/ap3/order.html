@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	    <title>优惠商城</title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/style.css" />
+	    <script type="text/javascript"> 
+	        !function(J){function H(){var d=E.getBoundingClientRect().width;var e=(d/7.5>100*B?100*B:(d/7.5<42?42:d/7.5));E.style.fontSize=e+"px",J.rem=e}var G,F=J.document,E=F.documentElement,D=F.querySelector('meta[name="viewport"]'),B=0,A=0;if(D){var y=D.getAttribute("content").match(/initial\-scale=([\d\.]+)/);y&&(A=parseFloat(y[1]),B=parseInt(1/A))}if(!B&&!A){var u=(J.navigator.appVersion.match(/android/gi),J.navigator.appVersion.match(/iphone/gi)),t=J.devicePixelRatio;B=u?t>=3&&(!B||B>=3)?3:t>=2&&(!B||B>=2)?2:1:1,A=1/B}if(E.setAttribute("data-dpr",B),!D){if(D=F.createElement("meta"),D.setAttribute("name","viewport"),D.setAttribute("content","initial-scale="+A+", maximum-scale="+A+", minimum-scale="+A+", user-scalable=no"),E.firstElementChild){E.firstElementChild.appendChild(D)}else{var s=F.createElement("div");s.appendChild(D),F.write(s.innerHTML)}}J.addEventListener("resize",function(){clearTimeout(G),G=setTimeout(H,300)},!1),J.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(G),G=setTimeout(H,300))},!1),H()}(window);
+	        if (typeof(M) == 'undefined' || !M){
+	            window.M = {};
+	        }
+	    </script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav header">
+		    <a class="mui-action-back mui-icon mui-pull-left" href=""><i class="iconfont">&#xe602;</i></a>
+		    <h1 class="mui-title">提交订单</h1>
+		    <a class="mui-action-back mui-icon mui-pull-right" href="search.html"><i class="iconfont">&#xe601;</i></a>
+		</header>
+		<div class="mui-content">
+			<div class="add-address">
+	           <a href="address.html">+新建收货地址</a>
+	           <i class="am-icon-angle-right"></i>
+	        </div>
+	        <div class="h10"></div>
+	        <ul class="shopcart-list" style="padding-bottom: 0;">
+		    	<li>
+	                <img src="images/p1.png" class="shop-pic">
+	                <div class="order-mid">
+	                	<div class="tit">法国加力果12个装 进口新鲜水果 嘎啦苹果 包邮</div>
+	                	<div class="order-price">￥169 <i>X2</i></div>
+	                </div>
+		    	</li>
+		    	<li>
+	                <img src="images/p2.png" class="shop-pic">
+	                <div class="order-mid">
+	                	<div class="tit">法国加力果12个装 进口新鲜水果 嘎啦苹果 包邮</div>
+	                	<div class="order-price">￥169 <i>X2</i></div>
+	                </div>
+		    	</li>
+		    </ul>
+		    <ul class="order-infor">
+		    	<li class="order-infor-first">
+		    		<span>商品总计：</span>
+		    		<i>￥88.00</i>
+		    	</li>
+		    	<li class="order-infor-first">
+		    		<span>运费：</span>
+		    		<i>包邮</i>
+		    	</li>
+		    	<li class="order-infor-first">
+		    		<a href="">积分抵费&gt;</a>
+		    	</li>
+		    	<li class="order-infor-first">
+		    		<a href="">选择优惠券&gt;</a>
+		    	</li>
+		    </ul>
+		    <div class="h10"></div>
+		    <textarea placeholder="备注说明" class="bz-infor"></textarea>
+		    <div class="h10"></div>
+		    <div class="jl"></div>
+		    <div class="shop-fix">
+		    	<div class="order-text">
+		    		应付总额：<span>￥188</span>
+		    	</div>
+		    	<a href="tureorder.html" class="js-btn">提交订单</a>
+		    </div>
+		</div>
+	</body>
+</html>

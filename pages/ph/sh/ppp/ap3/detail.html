@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	    <title>优惠商城</title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/style.css" />
+	    <script type="text/javascript"> 
+	        !function(J){function H(){var d=E.getBoundingClientRect().width;var e=(d/7.5>100*B?100*B:(d/7.5<42?42:d/7.5));E.style.fontSize=e+"px",J.rem=e}var G,F=J.document,E=F.documentElement,D=F.querySelector('meta[name="viewport"]'),B=0,A=0;if(D){var y=D.getAttribute("content").match(/initial\-scale=([\d\.]+)/);y&&(A=parseFloat(y[1]),B=parseInt(1/A))}if(!B&&!A){var u=(J.navigator.appVersion.match(/android/gi),J.navigator.appVersion.match(/iphone/gi)),t=J.devicePixelRatio;B=u?t>=3&&(!B||B>=3)?3:t>=2&&(!B||B>=2)?2:1:1,A=1/B}if(E.setAttribute("data-dpr",B),!D){if(D=F.createElement("meta"),D.setAttribute("name","viewport"),D.setAttribute("content","initial-scale="+A+", maximum-scale="+A+", minimum-scale="+A+", user-scalable=no"),E.firstElementChild){E.firstElementChild.appendChild(D)}else{var s=F.createElement("div");s.appendChild(D),F.write(s.innerHTML)}}J.addEventListener("resize",function(){clearTimeout(G),G=setTimeout(H,300)},!1),J.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(G),G=setTimeout(H,300))},!1),H()}(window);
+	        if (typeof(M) == 'undefined' || !M){
+	            window.M = {};
+	        }
+	    </script>
+	    
+	</head>
+	<body>
+		<!--图片轮播-->
+		<div id="slider" class="mui-slider" >
+		  <div class="mui-slider-group mui-slider-loop">
+		    <div class="mui-slider-item mui-slider-item-duplicate">
+		      <a href="#"> <img src="images/detail.jpg"> </a>
+		    </div>
+		    <div class="mui-slider-item">
+		      <a href="#"> <img src="images/detail.jpg"> </a>
+		    </div>
+		    <div class="mui-slider-item">
+		      <a href="#"><img src="images/detail.jpg"></a>
+		    </div>
+		    <div class="mui-slider-item">
+		      <a href="#"> <img src="images/detail.jpg"> </a>
+		    </div>
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="images/detail.jpg">
+		      </a>
+		    </div>
+		    <div class="mui-slider-item mui-slider-item-duplicate">
+		      <a href="#"><img src="images/detail.jpg"> </a>
+		    </div>
+		  </div>
+		  <div class="mui-slider-indicator">
+		    <div class="mui-indicator mui-active"></div>
+		    <div class="mui-indicator"></div>
+		    <div class="mui-indicator"></div>
+		    <div class="mui-indicator"></div>
+		  </div>
+		</div>
+		<div class="g-price">
+			<span class="fl money"><em>￥</em>68</span>
+			<del class="fl delmoney">￥198</del>
+			<i class="fr num">已团233件·2人团</i>
+		</div>
+		<div class="g-desc">
+			<h2>果汁软糖团购专享优惠</h2>
+			<p>果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁果汁</p>
+		</div>
+	
+		<!--店铺信息-->
+		<div class="g-mall-infor">
+			<div class="g-mall-logo fl">
+				<img src="images/qcp.png" />
+			</div>
+			<div class="g-mall-name fl">
+				<span>魔霸旗舰店</span>
+				<p>商品数量：3  &nbsp;&nbsp;&nbsp;已团：2.8万</p>
+			</div>
+			<a href="small.html" class="g-mall-btn fr">去逛逛 <i class="iconfont">&#xe605;</i></a>
+		</div>
+	
+		<!--图文详情-->
+		<h2 class="liketitle">图文详情</h2>
+		<div class="g-mall-content">
+			<img src="images/detail.jpg"/>
+		</div>
+		<!--固定在底部的按钮-->
+		<div class="jl"></div>
+		<div class="fix-mall-btn">
+			<div class="fix-mall-index fl">
+				<a href="index.html">
+					<i class="iconfont">&#xe601;</i>
+					<p>首页</p>
+				</a>
+				<a href="javacsript:;" class="collect">
+					<i class="iconfont">&#xe675;</i>
+					<p>收藏</p>
+				</a>
+			</div>
+			<div class="fix-buy-btn fr">
+				<p>49.9</p>
+				<p>一键开团</p>
+			</div>
+			<div class="fix-buy-btn fr">
+				<p>49.9</p>
+				<p>单独购买</p>
+			</div>
+		</div>
+		<!--选择商品属性弹出框-->
+		<div class="mui-backdrop" style="display: none;"></div>
+		<div class="g-detail" >
+			<div class="g-detail-top">
+				<div class="g-detail-close"><i class="iconfont">&#xe625;</i></div>
+				<div class="g-top-img fl"><img src="images/qcp.png"/></div>
+				<div class="g-top-info fl">
+					<p class="price">￥56</p>
+					<p class="select">请选择颜色尺码</p>
+				</div>
+			</div>
+			<div class="g-detail-color">
+				<h2>颜色</h2>
+				<ul>
+					<li class="current">粉紫色</li>
+					<li>白色</li>
+				</ul>
+			</div>
+			<div class="g-detail-size">
+				<h2>尺码</h2>
+				<ul>
+					<li class="current">110</li>
+					<li>120</li>
+					<li>130</li>
+					<li>140</li>
+					<li>150</li>
+				</ul>
+			</div>
+			<div class="g-detail-num">
+				<h2 class="fl">购买数量</h2>
+				<div class="fr">
+	                <div class="mui-numbox" data-numbox-min='0'>
+					  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+					  <input class="mui-numbox-input" type="number" border="0" />
+					  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+					</div>
+		         </div>
+	         </div>
+            <div class="g-detail-btn">
+            	确定
+            </div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js" ></script>
+		<script>
+			//点击购买弹出遮罩
+			$(function(){
+				$(".fix-buy-btn").click(function(){
+					$(".mui-backdrop").show();
+					$(".g-detail").slideDown();
+				})
+				$(".g-detail-close").click(function(){
+					$(".mui-backdrop").hide();
+					$(".g-detail").slideUp();
+				})
+			})
+			$(function(){
+				$(".g-detail-color , .g-detail-size").each(function(){
+					var i=$(this);
+					var p=i.find("ul > li");
+					p.click(function(){
+						if(!!$(this).hasClass("current")){
+							$(this).removeClass("current");
+						}
+						else{
+							$(this).addClass("current").siblings("li").removeClass("current");
+						}
+					})
+				})
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" />
+    <style>
+        
+body:after * {
+    font-family: 'xsphone,phone,xlphone,tablet,xltablet,desktop'
+}
+
+*,:after,:before {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(255,0,0,0);
+    outline: 0;
+    -webkit-touch-callout: none
+}
+
+body,html {
+    background-color: #e1e1e1;
+    color: #555;
+    padding: 0;
+    margin: 0
+}
+
+div,ul,ur {
+    padding: 0;
+    margin: 0
+}
+.left-menu-box {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    animation-duration: .5s;
+    -webkit-animation-duration: .5s;
+}
+.menu {
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    max-width: 400px;
+    background: rgba(45,45,45,.99);
+    top: 0;
+    left: 0;
+    padding-bottom: 120px;
+    z-index: 3;
+}
+
+.menu-btn-box {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+.menu-btn-box a {
+    float: left;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 60px;
+    color: #fff;
+    text-align: center;
+    padding-top: 60px;
+    text-decoration: none;
+    line-height: 2em;
+}
+#more_movie {
+    background-image: url(http://avatar.graphmovie.com/gmspanel/olr/images/btn_more.png);
+}
+#deng_opt {
+    background-image: url(http://avatar.graphmovie.com/gmspanel/olr/images/btn_light.png);
+}
+
+.menu ul {
+    padding: 0 10%;
+    overflow-y: auto;
+    height: 100%;
+    padding-top: 40px;
+    margin-bottom: 100px;
+}
+.menu ul li {
+    list-style: none;
+    width: 100%;
+    color: #fff;
+    font-size: 1em;
+    line-height: 22px;
+    margin-bottom: 3px;
+    line-height: 3.3em;
+    border-bottom: 1px solid rgba(255,255,255,.4);
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu ul .cur {
+    font-weight: 900;
+    color: #00b9ff;
+}
+.menu ul li:hover {
+    color: #00b9ff;
+}
+@media only screen and (max-width: 600px){
+    .menu,.menu-btn-box {
+        max-width:240px
+    }
+
+    .menu-btn-box a {
+        background-size: auto 40px;
+        padding-top: 40px;
+        font-size: .8em
+    }
+
+    .menu ul li {
+        font-size: .8em
+    }
+}
+.xuan{
+    cursor: pointer;
+    text-align: center;
+    line-height: 53px;
+    position: fixed;
+    left: 5px;
+    bottom: 70px;
+    height: 50px;
+    width: 50px;
+    box-shadow: rgb(51, 51, 51) 0px 0px 2px;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    opacity: 0.5;
+}
+iframe{
+    height: 100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left: 0;
+}
+.hide{
+    display: none;
+}
+#main1{
+    display: none;
+}
+
+
+/*main2 内容设置*/
+
+.list {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 10px 0;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+.it {
+    position: relative;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+
+}
+.it div{
+    text-align: center;
+}
+.it div img{
+    max-width: 100%;
+}
+@media screen and (min-width: 500px){
+    .list {
+        width: 500px;
+        margin: 50px auto;
+    }
+}
+.showm #main1{
+    display: block;
+}
+.showm #main2{
+    display: none;
+}
+
+    </style>
+
+</head>
+<body class="">
+<div id="main1">
+    <div id="menu" class="left-menu-box animated hide" style="">
+        <div class="menu">
+            <div class="menu-btn-box">
+                <a id="deng_opt" href="javascript:void(0);" class="menu-btn">
+                    关闭选项
+                </a>
+                <a id="more_movie" href="javascript:void(0);" class="menu-btn">
+                    更多实例
+                </a>
+            </div>
+            <ul>
+                <li class="cur">
+                    第 一 章
+                </li>
+                <li class="">
+                    第 二 章
+                </li>
+                <li class="">
+                    第 三 章
+                </li>
+                <li class="">
+                    第 四 章
+                </li>
+                <li class="">
+                    第 五 章
+                </li>
+                <li class="">
+                    第 六 章
+                </li>
+                <li class="">
+                    第 七 章
+                </li>
+
+
+                <li class="cur">
+                    第 一 章
+                </li>
+                <li class="">
+                    第 二 章
+                </li>
+                <li class="">
+                    第 三 章
+                </li>
+                <li class="">
+                    第 四 章
+                </li>
+                <li class="">
+                    第 五 章
+                </li>
+                <li class="">
+                    第 六 章
+                </li>
+                <li class="">
+                    第 七 章
+                </li>
+
+                <li class="cur">
+                    第 一 章
+                </li>
+                <li class="">
+                    第 二 章
+                </li>
+                <li class="">
+                    第 三 章
+                </li>
+                <li class="">
+                    第 四 章
+                </li>
+                <li class="">
+                    第 五 章
+                </li>
+                <li class="">
+                    第 六 章
+                </li>
+                <li class="">
+                    第 七 章
+                </li>
+            </ul>
+        </div>
+        <div class="shadow" style="position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; z-index: 0;background: rgba(0,0,0,.5);"> </div>
+    </div>
+
+    <div class="xuan">
+        <i class="iconfont icon-logo-copy" style="font-size: 38px; font-weight: 900;"> </i>
+    </div>
+
+    <iframe id="theif" src="" frameborder="0"></iframe>
+</div>
+
+<div id="main2">
+    <div class="list">
+<!--         <div class="it" datid="ap1">
+            <h4>
+                1在线美食教程手机界面模板html全站(MUI)
+            </h4>
+            <p>
+                菜谱分类 ,创建菜谱 ,食话 ,邮箱 ,找回密码 ,首页 ,主食 ,登录 ,用户页 ,消息 ,注册 ,设置（意见反馈） ,秀出我的美食 ,图案解锁 ,视频专区
+            </p>
+            <div>
+                <img src="http://image.17sucai.com/upload/155563/2017-05-06/34cdfe81e6cc3be57bb2546111d42b5e_thumb.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="it" datid="ap2">
+            <h4>
+                在线美食教程手机界面模板html全站(MUI)
+            </h4>
+            <p>
+                菜谱分类 ,创建菜谱 ,食话 ,邮箱 ,找回密码 ,首页 ,主食 ,登录 ,用户页 ,消息 ,注册 ,设置（意见反馈） ,秀出我的美食 ,图案解锁 ,视频专区
+            </p>
+            <div>
+                <img src="http://image.17sucai.com/upload/155563/2017-05-06/34cdfe81e6cc3be57bb2546111d42b5e.jpg" alt="">
+            </div>
+                
+        </div> -->
+    
+    </div>
+
+
+</div>
+<script src="http://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+<script>
+$(function(){
+
+
+    $(".shadow,#deng_opt").click(function(){
+        // console.log($(this))
+        $("#menu").addClass("fadeOutLeft").removeClass("fadeInLeft")
+    })
+    $(".xuan").click(function(){
+        console.log($(this))
+        $("#menu").show().removeClass("fadeOutLeft").addClass("fadeInLeft")
+    })
+    $("#menu ul").on("click","li",function(){
+        if($(this).hasClass("cur")){
+            return;
+        }
+        $("#menu ul li").removeClass("cur")
+        $(this).addClass("cur")
+        tiaozhuan($(this).attr("curl"))
+    })
+    var bodyScollTop ;
+    $("#main2").on("click",".it",function(){
+        // console.log($(this).attr("tindex"))
+            // console.log(alldata)
+        bodyScollTop = $("body").scrollTop()
+        cdata = alldata[$(this).attr("tindex")]
+        firstIf()
+        $("body").toggleClass('showm')
+    })
+
+    $("#more_movie").click(function(){
+        $("body").toggleClass('showm')
+        $("#menu").removeClass("fadeInLeft").attr("style","")
+        $("body").scrollTop(bodyScollTop)
+    })
+
+
+    var alldata = "";
+    var cdata ="";
+$.get("ppp.json",function(dat){
+    alldata = dat;
+    console.log(alldata)
+    addCar()
+
+    // cdata = dat[1];
+    // firstIf()
+})
+
+var picPh ="http://image.17sucai.com/upload/155563/2017-05-06/34cdfe81e6cc3be57bb2546111d42b5e_thumb.jpg";
+function addCar(){
+    $("#main2 .list").empty();
+    for(var i in alldata){
+        var tpages=""
+        for(var i2 in alldata[i].pages){
+            tpages += ","+alldata[i].pages[i2].t_title;
+        }
+        var thtml ="<h4>"+alldata[i].desc+"</h4>\n<p>"+tpages.substring(1)+"</p>\n <div> <img src= '"+alldata[i].pic+"'> </div>"
+        // console.log(thtml)
+        $("<div/>").addClass("it").attr("tindex",i).html(thtml).appendTo("#main2 .list")
+    }
+}
+
+
+function firstIf(){
+    // var isOnLoad = false;
+    // console.log(cdata);
+    var curl ="ppp/"+cdata.name+"/"+cdata.pages[0].t_url;
+    $("#theif").attr("src", curl); 
+    $("#theif").load(function() {
+        // if(isOnLoad){return;}
+        // isOnLoad = true;// 加载完成
+        // alert('load success'); 
+        console.log(2)
+        $("#theif").contents().find("a").each(function(){
+            if($(this).attr("href")){
+                if($(this).attr("href").indexOf("#")!==0){
+                    $(this).attr("href","javascript:void(0);")
+                }
+            }else{
+                $(this).attr("href","javascript:void(0);")
+            }
+        })
+        // $("#theif").contents().find("a").attr("href","javascript:void(0);")
+        
+        $("#menu ul").empty()
+        var pages = cdata.pages;
+        for (var i in pages){
+            $("<li/>").html(pages[i].t_title).attr("curl",pages[i].t_url).appendTo($("#menu ul"));
+        }
+        $("#menu ul li").eq(0).addClass("cur")
+    }); 
+}    
+    function tiaozhuan(turl){
+        console.log(3)
+        var turl ="ppp/"+cdata.name+"/"+turl
+        $("#theif").attr("src", turl); 
+        $("#theif").off().load(function() {
+            $("#theif").contents().find("a").each(function(){
+                if($(this).attr("href")){
+                    if($(this).attr("href").indexOf("#")!==0){
+                        $(this).attr("href","javascript:void(0);")
+                    }
+                }else{
+                    $(this).attr("href","javascript:void(0);")
+                }
+            })
+            // $("#theif").contents().find("a").attr("href","javascript:void(0);")
+        })
+    }
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+        
+body {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #446CB3;
+  font-family: 'Montserrat', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+body > .btn_b {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  left: 20%;
+  bottom: 20%;
+}
+
+p {
+  position: absolute;
+  bottom: 60%;
+  left: 25%;
+  right: 25%;
+  line-height: 1.5em;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+p > span {
+  font-size: 12px;
+  font-weight: 200;
+  text-transform: none;
+  display: block;
+  padding-top: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  color: #E4F1FE;
+}
+p > span > a {
+  color: #E4F1FE;
+  position: relative;
+  font-weight: 900;
+  text-decoration: none;
+  border-bottom: 2px solid #E4F1FE;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  margin: 0 2px;
+  transition: .75s;
+}
+p > span > a:hover {
+  padding-bottom: 4px;
+  transition: .25s;
+}
+
+a.link {
+  position: absolute;
+  width: 20%;
+  top: 60%;
+  transition: 0.5s;
+  display: block;
+  border: 1px solid #BDC3C7;
+  background: #fff;
+  text-decoration: none;
+  padding: 30px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+a.link > span {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#catchme {
+  left: 25%;
+  z-index: 99;
+  color: #D91E18;
+}
+
+.no {
+  right: 25%;
+  color: black;
+  z-index: 90;
+}
+.ifr_b{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+.ifr_b iframe{
+  width:100%;
+  height: 100%;
+}
+@media (max-width: 400px) {
+  a.link{
+    width: 49%;
+  }
+  #catchme{
+    top: 30%;
+  }
+}
+    </style>
+</head>
+<body>
+
+<div class="btn_b">
+    <!-- <p>抓住他, <br />you can<span>Grab the "yes" - By JLNLJN<br />Inspired by the funny Who's the king ?</span></p> -->
+    <a href="#" class="link" id="catchme"><span>移动端</span></a>
+    <a href="#" class="link no" id="gotopc"><span>PC端</span></a> 
+</div>
+<div class="ifr_b">
+  <iframe src="pages/bg_xiaoqu/index.html" frameborder="0"></iframe>
+</div>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+if($(window).width()>600){
+    $('#catchme').hover(function(){
+        $(this).css("padding","13px 0");
+        $('#catchme span').html("(～￣▽￣)～<br/><br/>点不到!");
+        $(this).css('position','absolute').css('top', Math.random()*90 + '%').css('left', Math.random()*90 + '%');
+    }).click(function(){
+        alert("╮(╯▽╰)╭被抓住了")
+        window.open('ph/sh/showP.html','_blank')
+    });
+}else{
+    $('#catchme').click(function(){
+        window.open('ph/sh/showP.html','_blank')
+    });
+} 
+
+    $("#gotopc").click(function(){
+        window.open('pc/XG/shou.html','_blank')
+    })
+
+</script>
+</body>
+</html>

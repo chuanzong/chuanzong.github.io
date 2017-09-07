@@ -1,0 +1,175 @@
+/*qq:1135800463*/
+/*Email:1135800463@qq.com*/
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, a, fieldset, input, th, td,i
+{margin: 0; padding: 0; border: 0; outline: none; font-style: normal; font-weight: normal;}
+html{ height: 100%;}
+body{ background: #fff;}
+ul, ol{list-style: none;}
+a{color: black;text-decoration: none;}
+a:hover{text-decoration: none;}
+img{max-width: 100%; width: auto; height: auto; vertical-align: top; border: 0;}
+.ui-page-login,body {width: 100%;height: 100%;margin: 0px;padding: 0px;}
+li{ list-style-type: none;}
+@font-face {
+  font-family: 'iconfont';  /* project id 293160 */
+  src: url('//at.alicdn.com/t/font_cuh0v09f9rx80k9.eot');
+  src: url('//at.alicdn.com/t/font_cuh0v09f9rx80k9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_cuh0v09f9rx80k9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_cuh0v09f9rx80k9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_cuh0v09f9rx80k9.svg#iconfont') format('svg');
+}
+.fl{ float: left;}
+.fr{ float: right;}
+.iconfont{font-family:"iconfont"; font-size:20px; font-style:normal;} 
+.mui-content{height: 100%;}
+.area {	margin: 20px auto 0px auto;	}	
+.mui-input-group {margin-top: 10px;}
+.mui-input-group:first-child {margin-top: 20px;}
+.mui-input-group label {width: 22%;}
+.mui-input-row label~input,
+.mui-input-row label~select,
+.mui-input-row label~textarea {width: 78%;}
+.mui-checkbox input[type=checkbox],
+.mui-radio input[type=radio] {top: 6px;}
+.mui-content-padded {margin-top: 25px;}
+.mui-btn {padding: 10px;}
+.link-area {display: block;margin-top: 25px;text-align: center;}
+.spliter {color: #bbb;	padding: 0px 8px;}
+.oauth-area {position: absolute;bottom: 20px;left: 0px;text-align: center;width: 100%;padding: 0px;margin: 0px;}
+.oauth-area .oauth-btn {display: inline-block;width: 50px;height: 50px;background-size: 30px 30px;background-position: center center;background-repeat: no-repeat;margin: 0px 20px;/*-webkit-filter: grayscale(100%); */border: solid 1px #ddd;border-radius: 25px;}
+.oauth-area .oauth-btn:active {border: solid 1px #aaa;}
+.oauth-area .oauth-btn.disabled {background-color: #ddd;}
+.header .mui-btn-link{ color: #ff1c01;}
+.mui-bar{ background: #fff;}
+.mui-btn-blue, .mui-btn-primary, input[type=submit]{ background: #ff1c01; border: 1px solid #ff1c01;}
+.login-text a{ color: #666; font-size: 14px;}
+.else-login{ position: absolute; bottom: 50px; text-align: center; width: 100%;}
+.login-style{ width: 60%; margin: 0 auto;}
+.login-style li{ float: left; width: 33.33%; text-align: center;}
+.login-style li i{  font-size: 40px;}
+.icon-qq a{ color: #00abf7;}
+.icon-wexin a{ color: #39e249;}
+.icon-weibo a{ color: #de0609;}
+.else-login p{ line-height: 50px;}
+.mui-search input[type=search]{ background: transparent; border: 1px solid #ddd;}
+.h44{ height: 44px;}
+.nav{ overflow: hidden; padding: 1rem 0;}
+.nav li{ float: left; width: 25%; text-align: center;}
+.index-list{ overflow: hidden;}
+.index-list img{ width: 100%;}
+.index-list li{ width: 50%; float: left; margin-bottom: 10px; }
+.index-list li a{ width: 98%; margin: 0 auto; display: block; position: relative;}
+.index-list li p{ position: absolute; width: 100%; bottom: 0; color: #fff; text-indent: 12px; height: 32px; line-height: 32px; background: rgba(0,0,0,.5); z-index: 999;}
+.mui-bar-tab .mui-tab-item.mui-active{ color: #ff1c01;}
+.list img{ width: 100%;}
+.list p, .list h2{ padding:0 10px;}
+.list h2{ font-size: 20px; margin-top: 15px;}
+.list li{ position: relative; margin-bottom: 25px;}
+.list-photo{ position: absolute; bottom: -10px; right: 10px; text-align: center;}
+.list-photo img{ width: 50px; height: 50px; border-radius: 50%;}
+.list-photo p{ line-height: 15px;}
+.h50{ height: 50px;}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{ color: #FF1C01; border: 0;}
+.title{ background: #f1f1f1; line-height: 40px; font-size: 16px; padding-left:15px ; color: #333;}
+.video{ overflow: hidden; padding: 10px 0;}
+.video li{ float: left; width: 25%; text-align: center;}
+.video li img{ width: 50px; height: 50px; border-radius: 50%;}
+.video-list{ background: #f1f1f1; padding: 10px 0;}
+.video-list li{ padding:0 10px; position: relative; margin-bottom: 10px;}
+.video-list li img{ width: 100%; border-radius: 10px 10px 0 0;}
+.video-list .text{ background: #fff; border-radius: 0 0 10px 10px; padding-left: 10px; padding-bottom: 10px;}
+.video-list .text h2{ font-size: 18px;  padding-top: 10px; line-height: 25px;}
+.video-list .pic{ position: absolute; right: 30px; bottom: 40px;}
+.video-list .pic img{ width: 50px; height: 50px; border-radius: 50%;}
+.ranking{  }
+
+.ranking .mui-table-view-cell { background: #fff; border-left: 1px solid #ddd; }
+.ranking h2{ font-size: 16px; text-align: center; margin-top: 10px;}
+.ranking p{ text-align: center;}
+.ranking h3{ line-height: 40px; padding: 0 15px; font-size: 20px;}
+.wall {
+  display: block;
+  position: relative;
+}
+.wall-column {
+  display: block;
+  position: relative;
+  width: 50%;
+  padding: 0 2%;
+  float: left;
+  box-sizing: border-box;
+}
+.article {
+  display: block;
+  margin: 0 0 8% 0;
+  padding: 5%;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  transition: all 100;
+  overflow: hidden;
+  position: relative;
+}
+.article:hover{ transform: scale(1.01);}
+.article img {
+  display: block;
+  width: 100%;
+  margin: 0 0 5% 0;
+}
+.article a{ color: #666;}
+.article p{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; font-size: 16px; }
+.article small{ font-size: 1em; color: #ff0000; line-height: 1.5;}
+.article input{ width: 20%; padding: 0.6em; border-radius: 0.4em; font-size: 1.1em; z-index: 100; background-color: #f60; border: none; position: absolute; bottom: 3%; right: 5%; color: #fff; box-shadow: 0 0 7px #d7d7d7;}
+/*瀑布流结束*/
+.wrapper h3{ text-align: center; margin:0 20%; white-space: nowrap; text-overflow: ellipsis; font-weight:normal; color: #333; overflow: hidden;  font-size: 1.5em; padding: 0.7em 0;}
+.wrapper h4{ width: 90%; margin:0 5%; text-align: justify; font-weight:normal; color: #999;  font-size: 1.2em; margin-bottom: 3%; line-height:1.5; }
+.wrapper{ background: #F1F1F1; padding-top: 15px;}
+.show{ position: fixed; bottom: 30px; background: #FF1C01; color: #fff; text-align: center; height: 40px; line-height: 40px; border-radius: 5px; width: 90%; margin:0 5%; display: block;}
+.mui-table-view .mui-media-object{ border-radius: 50%;}
+.emali .mui-media-body{ margin-top: 10px;}
+.emali .mui-media-body i{ float: right; font-size: 14px; color: #666;}
+.write{ background: #F1F1F1; text-align: center; line-height: 50px; display: block;}
+.c-title{ width: 80%; margin: 0 auto; text-align: center; }
+.c-title h2{ border-bottom: 1px solid #ddd; font-size: 20px; line-height: 40px;}
+.c-title p{ line-height: 30px;}
+.cate-title{background: #F1F1F1; line-height: 50px; display: block; overflow: hidden; padding: 0 15px;}
+.member{ background: #ff1c01; overflow: hidden;}
+.member-pic{ margin:0 auto; width: 100px;  padding: 30px 0 10px 0; display: block;}
+.member-pic img{width: 100px; height: 100px; border-radius: 50%;}
+.member-name{ text-align: center; line-height: 30px;}
+.member-nav li{ width: 25%; float: left; text-align: center; border-right: 1px solid #fff; margin: 15px 0;}
+.member-nav li a{ color: #fff;}
+.member-nav li a p{ color: #fff;}
+.member-nav li:last-child{ border-right: 0;}
+.member-text{ width: 150px; margin: 0 auto; height: 30px; color: #fff; font-size: 12px; line-height: 30px; border-radius: 20px; margin: 15px auto; text-align: center; background: rgba(0,0,0,.2);}
+.mem-menu{ overflow: hidden; padding: 15px 0;  margin: .1rem 0; background: #fff;}
+.mem-menu li{ width: 25%; text-align: center; float: left;}
+.mem-menu li i{ font-size: 30px;}
+.mem-menu li:nth-child(1) i{ color: #2AC845;}
+.mem-menu li:nth-child(2) i{ color: #fc6506;}
+.mem-menu li:nth-child(3) i{ color: #fd5046;}
+.mem-menu li:nth-child(4) i{ color: #ffc940;}
+.m-item{ margin-top: 10px; background: #fff; overflow: hidden; padding:0 15px; }
+.m-item li{ line-height: .9rem; border-bottom: 1px solid #ddd; overflow: hidden;}
+.m-item li:last-child{ border-bottom: 0;}
+.m-item li i{ float: left; display: block; font-size: 20px;}
+.m-item li span{ display: block; float: left; margin-left: 15px; font-size: 16px;}
+.m-item li a{color: #333; display: block; line-height: 50px; overflow: hidden;}
+.m-item li i:nth-child(1){ color: #222;}
+.banner img{ width: 100%;}
+.m-bar{ text-align: center;}
+.m-bar li{  display: inline-block;  border: 1px solid #FF1C01; padding: 5px 15px; 	}
+.m-bar .current{ background: #FF1C01;}
+.m-bar .current a{ color: #fff;}
+.m-bar li:last-child{ margin-left: -10px;}
+.eat li{ overflow: hidden; padding: 10px; border-bottom: 1px solid #ddd;}
+.eat .eat-top img{ width: 40px; height: 40px; border-radius: 50%; float: left;}
+.eat .eat-top-text{ float: left; margin-left: 10px;}
+.eat .eat-top-text h2{ color: #FF1C01; font-size: 16px; line-height: 20px;}
+.eat .btn{ float: right; font-size: 12px; border: 1px solid #ddd; padding: 3px 10px;}
+.eat-top { overflow: hidden;}
+.eat-middle{ font-size: 14px; margin-bottom: 10px;}
+.eat-img{ overflow: hidden;}
+.eat-img img{ width: 30%; float: left; margin-right: 1%;}
+.eat-bot{ color: #999; margin-top: 10px; font-size: 12px;}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>优惠商城</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript"> 
+        !function(J){function H(){var d=E.getBoundingClientRect().width;var e=(d/7.5>100*B?100*B:(d/7.5<42?42:d/7.5));E.style.fontSize=e+"px",J.rem=e}var G,F=J.document,E=F.documentElement,D=F.querySelector('meta[name="viewport"]'),B=0,A=0;if(D){var y=D.getAttribute("content").match(/initial\-scale=([\d\.]+)/);y&&(A=parseFloat(y[1]),B=parseInt(1/A))}if(!B&&!A){var u=(J.navigator.appVersion.match(/android/gi),J.navigator.appVersion.match(/iphone/gi)),t=J.devicePixelRatio;B=u?t>=3&&(!B||B>=3)?3:t>=2&&(!B||B>=2)?2:1:1,A=1/B}if(E.setAttribute("data-dpr",B),!D){if(D=F.createElement("meta"),D.setAttribute("name","viewport"),D.setAttribute("content","initial-scale="+A+", maximum-scale="+A+", minimum-scale="+A+", user-scalable=no"),E.firstElementChild){E.firstElementChild.appendChild(D)}else{var s=F.createElement("div");s.appendChild(D),F.write(s.innerHTML)}}J.addEventListener("resize",function(){clearTimeout(G),G=setTimeout(H,300)},!1),J.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(G),G=setTimeout(H,300))},!1),H()}(window);
+        if (typeof(M) == 'undefined' || !M){
+            window.M = {};
+        }
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav header">
+	    <a class="mui-action-back mui-icon mui-pull-left" href=""><i class="iconfont">&#xe602;</i></a>
+	    <h1 class="mui-title">购物车</h1>
+	    <a class="mui-action-back mui-icon mui-pull-right" href="search.html"><i class="iconfont">&#xe601;</i></a>
+	</header>
+	<div class="mui-content">
+		<div class="car">
+			<img src="images/car.png" />
+			<p>购物车肚子空空哦！</p>
+		</div>
+		<ul class="action">
+			<li><a href="salse.html"><img src="images/1.png"/></a></li>
+			<li><a href=""><img src="images/2.png"/></a></li>
+		</ul>
+	</div>
+	<!--底部导航-->
+	<div class="jl"></div>
+	<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item" href="index.html">
+		        <span class="mui-icon "><i class="iconfont">&#xe601;</i></span>
+		        <span class="mui-tab-label">优惠</span>
+		    </a>
+		    <a class="mui-tab-item" href="hot.html">
+		        <span class="mui-icon"><i class="iconfont">&#xe626;</i></span>
+		        <span class="mui-tab-label">热寻</span>
+		    </a>
+		    <a class="mui-tab-item" href="salse.html">
+		        <span class="mui-icon"><i class="iconfont">&#xe62f;</i></span>
+		        <span class="mui-tab-label">清仓</span>
+		    </a>
+		    <a class="mui-tab-item  mui-active" href="shopcar.html">
+		        <span class="mui-icon"><i class="iconfont">&#xe600;</i></span>
+		        <span class="mui-tab-label">购物车</span>
+		    </a>
+		    <a class="mui-tab-item" href="member.html">
+		        <span class="mui-icon"><i class="iconfont">&#xe654;</i></span>
+		        <span class="mui-tab-label">我的</span>
+		    </a>
+		</nav>
+		<script>
+			mui('body').on('tap','a',function(){
+			    window.top.location.href=this.href;
+			});
+		</script>
+</body>
+</html>

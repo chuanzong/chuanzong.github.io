@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+	<body style="background: #f1f1f1;">
+		<header class="mui-bar mui-bar-nav header">
+			<a  class="mui-pull-left mui-btn-link"><i class="iconfont">&#xe723;</i></a>
+			<h1 class="mui-title">Show秀</h1>
+		</header>
+		<div class="h44"></div>
+	    <div class="wrapper">
+			<ul class="wall">
+				<li class="article">
+					<a href="">
+						<img src="images/1.png" />
+					<p>蛋挞搭配下午茶，非常惬意</p>
+					</a>
+				</li>
+				<li class="article">
+					<a href="">
+						<img src="images/tx.jpg" />
+						<p>橘子布丁酸甜可口</p>
+					</a>
+				</li>
+				<li class="article">
+					<a href="">
+						<img src="images/t1.png" />
+						<p>色香味俱全</p>
+					</a>
+				</li>
+				<li class="article">
+					<a href="">
+						<img src="images/4.png" />
+						<p>香浓滑腻可口</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<a class="show" href="#picture"><i class="iconfont">&#xe633;</i>秀出我的美食</a>
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom" style="display: none;">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">拍照或录像</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">选取现有的</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture" class=""><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+	    <script src="js/jquery-1.8.3.min.js"></script>
+	    <script type="text/javascript" src="js/mui.min.js" ></script>
+		<script type="text/javascript" src="js/jaliswall.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.wall').jaliswall({ item: '.article' });
+			});
+		</script>
+	</body>
+
+</html>
