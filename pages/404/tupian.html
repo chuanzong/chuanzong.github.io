@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/popup.css">
+<title>jQuery图片特效-碎片图片还原的动画特效代码</title>
+</head>
+<body>
+<div class="popup-container" style="background: #fff;">
+	<div class="img-flex"></div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/fragment.js"></script>
+<script type="text/javascript">
+$(function() {
+var fragmentConfig = {
+	container : '.img-flex',//显示容器
+	line : 10,//多少行
+	column : 24,//多少列
+	width : 1000,//显示容器的宽度
+	animeTime : 10000,//最长动画时间,图片的取值将在 animeTime*0.33 + animeTime*0.66之前取值 
+	img : '1.jpg'//图片路径
+};
+fragmentImg(fragmentConfig);
+});
+</script>
+</html>
