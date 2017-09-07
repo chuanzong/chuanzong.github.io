@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - STL</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #000000;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			#info {
+				color: #fff;
+				position: absolute;
+				top: 10px;
+				width: 100%;
+				text-align: center;
+				z-index: 100;
+				display:block;
+
+			}
+
+			a { color: skyblue }
+			.button { background:#999; color:#eee; padding:0.2em 0.5em; cursor:pointer }
+			.highlight { background:orange; color:#fff; }
+
+			span {
+				display: inline-block;
+				width: 60px;
+				float: left;
+				text-align: center;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<script src="./js/three.js"></script>
+
+		<script src="./js/STLLoader.js"></script>
+
+		<script src="./js/stats.min.js"></script>
+		<script src="./js/dat.gui.min.js"></script>
+		
+		<script src="./js/OrbitControls.js"></script>
+
+
+		<script>
+
+		function mymodel(){
+			var container, stats;
+
+			var camera, cameraTarget, scene, renderer,myobj;
+
+			var posxyz=new THREE.Vector3( 0, 0, 0 );
+			console.log(posxyz)
+
+			init();
+			
+
+			function init() {
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				// camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 15 );
+				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 1500 );
+				// camera.position.set( 3, 0.15, 3 );
+				camera.position.set( -5, 10, 30 );
+
+				// cameraTarget = new THREE.Vector3( 0, -0.25, 0 );
+				cameraTarget = new THREE.Vector3( 5, 2, 0 );
+
+
+				// controls
+				// controls = new THREE.OrbitControls( camera, renderer.domElement );
+				// controls = new THREE.OrbitControls( camera);
+
+				scene = new THREE.Scene();
+
+
+				// Ground
+
+				// var plane = new THREE.Mesh(
+				// 	new THREE.PlaneBufferGeometry( 50, 50 ),
+				// 	// new THREE.MeshPhongMaterial( { color: 0x999999, specular: 0x101010 } )
+				// 	new THREE.MeshPhongMaterial( { color: 0x999999 } )
+				// );
+				// plane.rotation.x = -Math.PI/2;
+				// plane.position.y = -0.5;
+				// plane.position.x = 10;
+				// scene.add( plane );
+
+				// 网格辅助
+				var size = 40;
+				var step = 1;
+
+				var gridHelper = new THREE.GridHelper( size, step );
+				gridHelper.position.y = -0.1;
+
+				scene.add( gridHelper );
+
+
+				// 辅助线
+				var axisHelper = new THREE.AxisHelper( 20 );
+				scene.add( axisHelper );
+				
+				
+
+
+				//  Model file
+
+				myobj = new THREE.Object3D();
+
+				
+
+				var loader = new THREE.STLLoader();
+				
+
+				loader.load( './wl/yaxis.stl', function ( geometry ) {//蓝色
+					var material = new THREE.MeshPhongMaterial( { color: 0x0099ff, specular: 0x111111, shininess: 200 } );
+					// var material = new THREE.MeshPhongMaterial( { color: 0xEEEEEE, specular: 0xEEEEEE, shininess: 200 } );
+
+					var mesh = new THREE.Mesh( geometry, material );
+					mesh.position.set( 0,-31,0 );
+					myobj.add( mesh );
+					console.log("加载完成1");
+					mesh2load()
+
+				} );
+				function mesh2load(){
+					loader.load( './wl/xaxis.stl', function ( geometry ) {//橙色
+						var material = new THREE.MeshPhongMaterial( { color: 0xff4400, specular: 0x111111, shininess: 200 } );
+						// var material = new THREE.MeshPhongMaterial( { color: 0xEEEEEE, specular: 0xEEEEEE, shininess: 600 } );
+
+						var mesh = new THREE.Mesh( geometry, material );
+						mesh.position.set(78.5,-31,0);
+						myobj.add( mesh );
+						console.log("加载完成2");
+						mesh3load();
+					} );
+				}
+				function mesh3load(){
+					loader.load( './wl/zaxis.stl', function ( geometry ) {//绿色
+						var material = new THREE.MeshPhongMaterial( { color: 0x9bd455, specular: 0x111111, shininess: 200 } );
+						// var material = new THREE.MeshPhongMaterial( { color: 0xEEEEEE, specular: 0xEEEEEE, shininess: 200 } );
+						var mesh = new THREE.Mesh( geometry, material );
+						mesh.position.set( 0,0,0 );
+						myobj.add( mesh );
+						console.log("加载完成3");
+						
+						mesh4load();
+					} );
+				}
+				function mesh4load(){
+					loader.load( './wl/squer.stl', function ( geometry ) {//灰色
+						var material = new THREE.MeshPhongMaterial( { color: 0x999999, specular: 0x111111, shininess: 200 } );
+						// var material = new THREE.MeshPhongMaterial( { color: 0xEEEEEE,specular: 0xEEEEEE, shininess: 200 } );
+						var mesh = new THREE.Mesh( geometry, material );
+						mesh.position.set( 0,0,0 );
+						myobj.add( mesh );
+
+						animate();
+						modelLoadEnd();
+					} );
+				}
+
+
+				myobj.position.set( 2, 0, -5 )
+				myobj.rotation.x = -Math.PI/2;
+				myobj.scale.set( .1, .1, .1);
+
+
+
+
+				scene.add( myobj );
+
+				// 光线设置
+				var directionalLight1 = new THREE.DirectionalLight( 0xffffff, 0.5 );
+				var directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.5 );
+				var directionalLight3 = new THREE.DirectionalLight( 0xffffff, 0.5 );
+				var directionalLight4 = new THREE.DirectionalLight( 0xffffff, 0.5 );
+				scene.add(directionalLight1);
+				directionalLight2.position.set( 0, 0, 1 );
+				scene.add(directionalLight2);
+				directionalLight3.position.set( 0, 0, -1 );				
+				scene.add(directionalLight3);
+				directionalLight4.position.set( -1, 0, 0 );				
+				scene.add(directionalLight4);
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setClearColor(0xAAAAAA, 1.0);//设置canvas背景色(clearColor)
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				container.appendChild( renderer.domElement );
+				controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+
+				// stats
+
+				stats = new Stats();
+				container.appendChild( stats.dom );
+
+				//窗口改变 大小
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+
+			function onWindowResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+
+			function animate() {
+				requestAnimationFrame( animate );
+				render();
+				stats.update();
+			}
+
+
+			function render() {
+				var timer = Date.now() * 0.0005;
+
+				// camera.position.x = Math.cos( timer ) * 3;
+				// camera.position.z = Math.sin( timer ) * 3;
+
+				camera.lookAt( cameraTarget );
+				modelLoadEnd();
+
+				renderer.render( scene, camera );
+			}
+			var myspeed = 1;
+
+			function modelLoadEnd(){
+				if (myobj.children.length<3){
+					return console.log('模块加载中。。。')
+				}
+				// console.log(myobj.children)
+				// console.log(myobj.children[2].position.x==posxyz.x)
+				// console.log('模块加载完成',myobj.children[2].position)
+				if((posxyz.x-myobj.children[2].position.x)>1){
+					myobj.children[2].position.x += myspeed;
+					myobj.children[0].position.x += myspeed
+					myobj.children[3].position.x += myspeed
+				}else if((posxyz.x-myobj.children[2].position.x)<0){
+					myobj.children[2].position.x -= myspeed
+					myobj.children[0].position.x -= myspeed
+					myobj.children[3].position.x -= myspeed
+				}
+				if((posxyz.y+myobj.children[2].position.y)>1){
+					myobj.children[2].position.y -= myspeed
+					myobj.children[3].position.y -= myspeed
+				}else if((posxyz.y+myobj.children[2].position.y)<0){
+					myobj.children[2].position.y += myspeed
+					myobj.children[3].position.y += myspeed
+				}
+				if((posxyz.z-myobj.children[2].position.z)>1){
+					myobj.children[2].position.z += myspeed
+					console.log("z+")
+				}else if((posxyz.z-myobj.children[2].position.z)<0){
+					myobj.children[2].position.z -= myspeed
+					console.log("z-")
+				}
+
+				// myobj.children[2].position.x += myspeed
+
+
+			}
+
+
+
+			return posxyz
+		}
+
+
+		var mydata = mymodel();
+		console.log(mydata)
+		// setTimeout(function(){
+		// 	mydata.x=60;
+		// 	mydata.y=30;
+		// 	mydata.z=-30;
+		// },500)
+
+
+
+
+
+
+
+
+
+
+			var controls = new function() {  
+				this.x轴 = 0;  
+				this.y轴 = 0;  
+				this.z轴 = 0;  
+				this.redraw = function() {  
+				    mydata.set(controls.x轴, controls.y轴, controls.z轴);  
+				}
+			}
+			gui = new dat.GUI();  
+			gui.add(controls, 'x轴', 0, 240).onChange(controls.redraw);  
+			gui.add(controls, 'y轴', 0, 80).onChange(controls.redraw);  
+			gui.add(controls, 'z轴', 0, 60).onChange(controls.redraw);
+
+
+
+
+
+
+
+
+
+
+
+		</script>
+	</body>
+</html>

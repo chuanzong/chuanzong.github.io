@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图形</title>
+	<style>
+		body {
+			background-color: #aaa;
+			margin: 0px;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<script src="./three.min.js"></script>
+	<script src="./OrbitControls.js"></script>
+
+
+	<script>
+		
+
+// Simple three.js example
+
+var mesh, renderer, scene, camera, controls,mesh_qiu;
+
+init();
+animate();
+
+function init() {
+
+    // renderer
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    document.body.appendChild( renderer.domElement );
+
+    // scene
+    scene = new THREE.Scene();
+    
+    // camera
+    camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
+    camera.position.set( 200, 200, 300 );
+    camera.lookAt({x:0,y:0,z:0});
+
+    // controls
+    controls = new THREE.OrbitControls( camera );
+    
+    // ambient
+    scene.add( new THREE.AmbientLight( 0x222222 ) );
+    
+    // light
+    var light = new THREE.DirectionalLight( 0xffffff, 1 );
+    light.position.set( 20, 20, 10 );
+    scene.add( light );
+    
+    // axes
+    scene.add( new THREE.AxisHelper( 80 ) );						//坐标轴辅助  
+
+
+
+    // var geo = new THREE.CylinderGeometry(0,2,2,4,1, true);		//圆柱体（顶面半径、底面半径、是圆柱体的高度、地边形、表示纬度上的切片数、表示是否没有顶面和底面
+    var geo = new THREE.CylinderGeometry(0,1,20,20,2,!1);
+    // var pyramid1 = new THREE.Mesh(geo, new THREE.MeshPhongMaterial({color:0xff0000}));
+    var pyramid1 = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({color:0xff7700}));
+    var pyramid2 = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({color:0x26ff00}));
+    var pyramid3 = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({color:0x001fff}));
+    pyramid1.position.set(80, 0, 0);
+    pyramid2.position.set(0, 80, 0);
+    pyramid3.position.set(0, 0, 80);
+    // pyramid1.rotation.z = - 90 * Math.pi / 180;
+    pyramid1.rotation.z =-Math.PI/2;
+    pyramid3.rotation.x =Math.PI/2;
+
+    scene.add( pyramid1 );
+    scene.add( pyramid2 );
+    scene.add( pyramid3 );
+}
+
+var material = new THREE.MeshBasicMaterial( { color: 0xFF0000 } );
+var loader = new THREE.FontLoader();
+loader.load('./helvetiker_regular.typeface.json', function(font) {
+// loader.load('./FZLanTingHeiS-UL-GB_Regular.json', function(font) {
+    var axis_text1 = new THREE.Mesh(new THREE.TextGeometry('X axis', {font: font, size: 5, height: 1 }), new THREE.MeshBasicMaterial( { color: 0xff7700 } )); 
+    var axis_text2 = new THREE.Mesh(new THREE.TextGeometry('Y axis', {font: font, size: 5, height: 1 }), new THREE.MeshBasicMaterial( { color: 0x26ff00 } )); 
+    var axis_text3 = new THREE.Mesh(new THREE.TextGeometry('Z axis', {font: font, size: 5, height: 1 }), new THREE.MeshBasicMaterial( { color: 0x001fff } )); 
+    axis_text1.position.set(70, -8, 0);
+    axis_text2.position.set(-2, 70, 0);
+    axis_text3.position.set(0, -8, 90);
+    axis_text2.rotation.z =Math.PI/2;
+    axis_text3.rotation.y =Math.PI/2;
+    scene.add(axis_text1);
+    scene.add(axis_text2);
+    scene.add(axis_text3);
+
+    // render
+    // renderer.render(scene, camera);
+});
+
+
+
+
+
+
+
+
+function animate() {
+
+    requestAnimationFrame( animate );
+    
+    // controls.update();
+    renderer.render( scene, camera );
+
+}
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

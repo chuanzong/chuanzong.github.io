@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图形</title>
+	<style>
+        html{
+            width: 100%;
+            height: 100%;
+        }
+		body {
+			background-color: #aaa;
+			margin: 0px;
+			overflow: hidden;
+            width: 100%;
+            height: 100%;
+		}
+        #three_Box{
+            width: 100%;
+            height: 100%;
+            background-color: #f90;
+            display:inline-block;
+        }
+	</style>
+</head>
+<body>
+
+
+    <div id="three_Box" style=""></div>
+	<script src="./three.min.js"></script>
+
+
+	<script src="./OrbitControls.js"></script>
+
+
+	<script>
+		
+
+// three.js example
+function three_run(b,q,t){
+var cube, renderer, scene, camera, controls,mesh_qiu;
+this.b_xyz = b;
+this.q_xyz = q;
+this.t_xyz = t;
+
+init();
+
+
+function init() {
+    
+
+    // renderer
+    renderer = new THREE.WebGLRenderer({ alpha: false ,antialias: !1});
+    // renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( three_Box.getBoundingClientRect().width, three_Box.getBoundingClientRect().height );
+    // document.body.appendChild( renderer.domElement );
+    three_Box.appendChild( renderer.domElement );
+
+    // scene
+    scene = new THREE.Scene();
+    scene.translateX(-30)
+    scene.translateZ(-40)
+    // scene.getClearAlpha(0)
+
+
+    // console.log(scene.getBackground())
+    
+    // camera
+    // camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 10000 );
+    camera = new THREE.PerspectiveCamera( 19, three_Box.getBoundingClientRect().width / three_Box.getBoundingClientRect().height, 1, 10000 );
+    camera.position.set( -100, 300, -150 );
+    camera.up.x = 0;
+    camera.up.y = 0; //相机朝向--相机上方为y轴
+    camera.up.z = -1;
+    camera.lookAt({x:0,y:10,z:0});
+
+    // controls
+    controls = new THREE.OrbitControls( camera, renderer.domElement );
+    
+    // ambient
+    scene.add( new THREE.AmbientLight( 0x222222 ) );
+    
+    // light
+    var spotLight = new THREE.PointLight( 0xffffff );
+    spotLight.position.set(-50, 300, -100  );
+    scene.add( spotLight );
+    
+    // axes
+    scene.add( new THREE.AxisHelper( 80 ) );						//坐标轴辅助  
+
+
+    //坐标轴箭头
+    var geo = new THREE.CylinderGeometry(0,1,20,20,2,!1);
+    var pyramid1 = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({color:0xff7700}));
+    var pyramid2 = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({color:0x26ff00}));
+    var pyramid3 = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({color:0x001fff}));
+    pyramid1.position.set(90, 0, 0);
+    pyramid2.position.set(0, 90, 0);
+    pyramid3.position.set(0, 0, 90);
+    pyramid1.rotation.z =-Math.PI/2;
+    pyramid3.rotation.x =Math.PI/2;
+
+    scene.add( pyramid1 );
+    scene.add( pyramid2 );
+    scene.add( pyramid3 );
+
+    
+    
+
+    // 空间长方体设置
+    var geometry = new THREE.CubeGeometry(b_xyz.x,b_xyz.y,b_xyz.z);
+    // var material = new THREE.MeshBasicMaterial( { color: 0xFF0000 } );
+    var material = new THREE.MeshLambertMaterial( { color: 0xFFFFFF } );
+    cube = new THREE.Mesh( geometry, material );
+    // scene.add( cube );
+
+    //空间球体设置
+    var geometry_qiu = new THREE.SphereGeometry( 2, 12, 8 );
+    mesh_qiu = new THREE.Mesh( geometry_qiu, material );
+    mesh_qiu.position.set(q_xyz.x,q_xyz.y,q_xyz.z);
+    scene.add( mesh_qiu );
+
+
+
+    text();
+    drawUnVisiableBorder();
+
+    // window.addEventListener('resize', onWindowResize, false);
+    window.addEventListener( 'resize', onWindowResize, false );
+    function onWindowResize() {  
+        camera.aspect = three_Box.getBoundingClientRect().width / three_Box.getBoundingClientRect().height;  
+        camera.updateProjectionMatrix();  
+        renderer.setSize( three_Box.getBoundingClientRect().width, three_Box.getBoundingClientRect().height );  
+    } 
+}
+ 
+
+// 文字设置
+function text(){
+    var loader = new THREE.FontLoader();
+    loader.load('./helvetiker_regular.typeface.json', function(font) {
+        var axis_text1 = new THREE.Mesh(new THREE.TextGeometry('X axis', {font: font, size: 5, height: 0 }), new THREE.MeshBasicMaterial( { color: 0xff7700 } )); 
+        var axis_text2 = new THREE.Mesh(new THREE.TextGeometry('Y axis', {font: font, size: 5, height: 0 }), new THREE.MeshBasicMaterial( { color: 0x26ff00 } )); 
+        var axis_text3 = new THREE.Mesh(new THREE.TextGeometry('Z axis', {font: font, size: 5, height: 0 }), new THREE.MeshBasicMaterial( { color: 0x001fff } ));
+        axis_text1.position.set(80, 0, -2);
+        axis_text2.position.set(-25, 80, 0);
+        axis_text3.position.set(-25, 0, 82);
+
+        axis_text1.rotation.x =-Math.PI/2;
+        axis_text2.rotation.x =-Math.PI/2;
+        axis_text3.rotation.x =-Math.PI/2;
+        scene.add(axis_text1);
+        scene.add(axis_text2);
+        scene.add(axis_text3);
+
+        var t_0 = new THREE.Mesh(new THREE.TextGeometry('0', {font: font, size: 5, height: 0 }), new THREE.MeshBasicMaterial( { color: 0xffffff } )); 
+        var t_1 = new THREE.Mesh(new THREE.TextGeometry(t_xyz.x, {font: font, size: 5, height: 0 }), new THREE.MeshBasicMaterial( { color: 0xffffff } )); 
+        var t_2 = new THREE.Mesh(new THREE.TextGeometry(t_xyz.y, {font: font, size: 5, height: 0 }), new THREE.MeshBasicMaterial( { color: 0xffffff } )); 
+        var t_3 = new THREE.Mesh(new THREE.TextGeometry(t_xyz.z, {font: font, size: 5, height: 0 }), new THREE.MeshBasicMaterial( { color: 0xffffff } )); 
+        t_0.position.set(-2, -1, -1);
+        t_1.position.set(b_xyz.x, 2, -2);
+        t_2.position.set(-11, b_xyz.y, 0);
+        t_3.position.set(-11, 0, b_xyz.z);
+
+        t_0.rotation.x =-Math.PI/2;
+        t_1.rotation.x =-Math.PI/2;
+        t_2.rotation.x =-Math.PI/2;
+        t_3.rotation.x =-Math.PI/2;
+
+        scene.add(t_0);
+        scene.add(t_1);
+        scene.add(t_2);
+        scene.add(t_3);
+
+    });
+}
+
+
+// 虚线框设置
+function DrawDashLine(p1,p2){
+    var geometry = new THREE.Geometry();
+    var material = new THREE.LineDashedMaterial({ vertexColors: false,dashSize:1,gapSize:1,color:0xffffff});
+    geometry.vertices.push(p1);
+    geometry.vertices.push(p2);
+    geometry.computeLineDistances();
+    var line = new THREE.Line(geometry,material);
+    line.position.set(b_xyz.x/2,b_xyz.y/2,b_xyz.z/2);
+    scene.add(line);
+    return line;
+}
+
+
+function drawUnVisiableBorder(){
+    for(var i=0 ; i< cube.geometry.vertices.length ; i ++ ){
+        var v1 = new THREE.Vector3();
+        v1.copy(cube.geometry.vertices[i]);
+        var v2 = new THREE.Vector3();
+        v2.copy(v1);
+        v2.x = 0;
+        DrawDashLine(v1,v2);
+        var v2 = new THREE.Vector3();
+        v2.copy(v1);
+        v2.y = 0;
+        DrawDashLine(v1,v2);
+        var v2 = new THREE.Vector3();
+        v2.copy(v1);
+        v2.z = 0;
+        DrawDashLine(v1,v2);
+    }
+}
+
+
+    // DrawDashLine(new THREE.Vector3(-b_xyz.x/2,-b_xyz.y/2,-b_xyz.z/2),new THREE.Vector3(q_xyz.x-b_xyz.x/2,q_xyz.y-b_xyz.y/2,q_xyz.z-b_xyz.z/2));
+    var xuxian = DrawDashLine(new THREE.Vector3(-b_xyz.x/2,-b_xyz.y/2,-b_xyz.z/2),new THREE.Vector3(q_xyz.x-b_xyz.x/2,q_xyz.y-b_xyz.y/2,q_xyz.z-b_xyz.z/2));
+
+function animate() {
+
+    requestAnimationFrame( animate );
+    // controls.update();
+
+    // 物体空间位置刷新
+    mesh_qiu.position.set(q_xyz.x,q_xyz.y,q_xyz.z);
+    // 物体空间虚线位置刷新
+    scene.remove(xuxian)
+    xuxian = DrawDashLine(new THREE.Vector3(-b_xyz.x/2,-b_xyz.y/2,-b_xyz.z/2),new THREE.Vector3(q_xyz.x-b_xyz.x/2,q_xyz.y-b_xyz.y/2,q_xyz.z-b_xyz.z/2));
+
+    renderer.render( scene, camera );
+}
+animate();
+return this.q_xyz;
+}
+var box_xyz={},ball_xyz={},text_xyz={};
+box_xyz.x = 70;
+box_xyz.y = 50;
+box_xyz.z = 60;
+
+ball_xyz.x = 50;
+ball_xyz.y = 30;
+ball_xyz.z = 40;
+
+text_xyz.x = 700;
+text_xyz.y = 500;
+text_xyz.z = 600;
+
+var M_position = three_run(box_xyz,ball_xyz,text_xyz)
+
+
+
+setInterval(function(){
+    M_position.x -= 1;
+    M_position.y -= 1;
+},500)
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
