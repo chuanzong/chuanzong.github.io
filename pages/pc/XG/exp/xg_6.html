@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    body{
+        background: #bbb;
+    }
+        
+        .jiao{
+            float: left;
+            width:200px;
+            height:200px;
+            background:#eee;
+            position: relative;
+            overflow: hidden;
+            margin: 10%;
+
+        }
+        .jiao>div{
+            position: absolute;
+            width:100%;
+            height:100%;
+            opacity: 0;
+        }
+
+        .jiao>div:hover{
+            opacity: .7;           
+        }
+
+        .jiao-1{
+            top:-50%;
+            left:-50%;
+            background-color: #999;
+            transform: rotate(45deg);
+            transform-origin:right bottom;
+        }
+
+        .jiao-2{
+            top:-50%;
+            right:-50%;
+            background-color: #990;
+            transform: rotate(45deg);
+            transform-origin:left bottom;
+        }
+
+        .jiao-3{
+            bottom:-50%;
+            right:-50%;
+            background-color: #909;
+            transform: rotate(45deg);
+            transform-origin:left top;
+        }
+        .jiao-4{
+            bottom:-50%;
+            left:-50%;
+            background-color: #099;
+            transform: rotate(45deg);
+            transform-origin:right top;
+        }
+    </style>
+</head>
+<body>
+    <div class="jiao">
+        <div class="jiao-1"></div>
+        <div class="jiao-2"></div>
+        <div class="jiao-3"></div>
+        <div class="jiao-4"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+<style>
+
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  background-color: #FAFAFB;
+  color: slategrey;
+}
+
+a.button {
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  color: steelblue;
+  font-weight: 500;
+  padding: 8px 15px 8px 15px;
+  border: 1px solid rgba(26, 53, 71, 0.1);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  transition: .25s;
+  background: linear-gradient(white, ghostwhite);
+}
+a.button:hover {
+  border: 1px solid rgba(26, 53, 71, 0.2);
+  background: white;
+}
+
+.wrapper {
+  width: 600px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity .5s;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  width: 20%;
+  position: relative;
+  margin: auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  transition: .5s;
+  opacity: 0;
+}
+.modal .content {
+  margin-top: 1rem;
+}
+.modal .content a {
+  max-width: 60%;
+  margin: auto;
+  display: block;
+}
+
+.overlay:target > .modal {
+  transform: translateY(30%) scale(0.9);
+  transition-timing-function: cubic-bezier(0.8, 0, 0, 1.5);
+  opacity: 1;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+a.close {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 22px;
+  height: 22px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  line-height: 21px;
+  color: lightslategrey;
+  background-color: lightgrey;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  transition: .25s;
+}
+a.close:hover {
+  background-color: tomato;
+  color: white;
+}
+  
+
+</style>  
+</head>
+<body>
+
+
+<div class="wrapper">
+  <a class="button" href="#pop">Click!</a>
+</div>
+
+<div id="pop" class="overlay">
+  <div class="modal">
+    <h2>Hey there!</h2>
+    <a class="close" href="#">×</a>
+    <div class="content">
+      So, here we are:<br/>
+      I am a pure (S)CSS Modal and work with the <strong>:target</strong> element.<br/><br/>
+      You can close me by clicking the x in the upper left corner or the button at the bottom.<br/><br/>
+      See you next time:)<br/><br/>
+      <a class="button" href="#">Close</a>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

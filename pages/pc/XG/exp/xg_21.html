@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black");
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #d43959;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+}
+.container div {
+  position: absolute;
+}
+.container .me {
+  left: 0;
+  position: absolute;
+  right: 0;
+  margin: auto;
+  width: 80px;
+  height: 160px;
+}
+.container .me .head {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 70px;
+  height: 90px;
+  background: #ffd3c1;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  top: 10px;
+  left: 5px;
+}
+.container .me .head .bangs {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  height: 50px;
+  width: 94%;
+  background: #111427;
+  content: "";
+  position: absolute;
+  -moz-border-radius: 100px 100px 10px 10px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px 100px 10px 10px;
+  top: -12px;
+  left: 3px;
+}
+.container .me .look-left.head {
+  width: 70px;
+  left: -10px;
+}
+.container .me .look-left.head .bangs {
+  width: 106%;
+  left: -7px;
+}
+.container .me .look-right.head {
+  width: 70px;
+  left: 15px;
+}
+.container .me .look-right.head .bangs {
+  width: 106%;
+  left: 5px;
+}
+.container .me .look-down.head {
+  height: 90px;
+  top: 20px;
+  width: 70px;
+  left: 5px;
+  -moz-transform-origin: bottom center 50%;
+  -ms-transform-origin: bottom center 50%;
+  -webkit-transform-origin: bottom center 50%;
+  transform-origin: bottom center 50%;
+}
+.container .me .look-down.head .bangs {
+  height: 80px;
+  top: -32px;
+}
+.container .me .look-up.head {
+  height: 90px;
+  top: 0px;
+  width: 70px;
+  left: 5px;
+  -moz-transform-origin: bottom center 50%;
+  -ms-transform-origin: bottom center 50%;
+  -webkit-transform-origin: bottom center 50%;
+  transform-origin: bottom center 50%;
+}
+.container .me .look-up.head .bangs {
+  height: 40px;
+  top: -12px;
+}
+.container .me .look-down-right.head {
+  top: 20px;
+  left: 25px;
+  width: 70px;
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+  -moz-transform-origin: bottom left 50%;
+  -ms-transform-origin: bottom left 50%;
+  -webkit-transform-origin: bottom left 50%;
+  transform-origin: bottom left 50%;
+}
+.container .me .look-down-right.head .bangs {
+  height: 60px;
+  width: 106%;
+}
+.container .me .look-up-right.head {
+  height: 90px;
+  top: 0px;
+  width: 70px;
+  left: 15px;
+  -moz-transform-origin: bottom center 50%;
+  -ms-transform-origin: bottom center 50%;
+  -webkit-transform-origin: bottom center 50%;
+  transform-origin: bottom center 50%;
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+.container .me .look-up-right.head .bangs {
+  width: 105%;
+  height: 40px;
+  top: -12px;
+  left: 5px;
+}
+.container .me .look-down-left.head {
+  top: 20px;
+  left: -15px;
+  width: 70px;
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  -moz-transform-origin: bottom right 50%;
+  -ms-transform-origin: bottom right 50%;
+  -webkit-transform-origin: bottom right 50%;
+  transform-origin: bottom right 50%;
+}
+.container .me .look-down-left.head .bangs {
+  height: 60px;
+  width: 106%;
+  left: -10px;
+}
+.container .me .look-up-left.head {
+  height: 90px;
+  top: 0px;
+  width: 70px;
+  left: -10px;
+  -moz-transform-origin: bottom center 50%;
+  -ms-transform-origin: bottom center 50%;
+  -webkit-transform-origin: bottom center 50%;
+  transform-origin: bottom center 50%;
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+.container .me .look-up-left.head .bangs {
+  width: 105%;
+  height: 40px;
+  top: -12px;
+  left: -10px;
+}
+.container .me .neck {
+  height: 60px;
+  width: 20px;
+  position: absolute;
+  -moz-border-radius: 0px 0px 100px 100px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px 0px 100px 100px;
+  background: #ffd3c1;
+  top: 60px;
+  left: 30px;
+  overflow: hidden;
+}
+.container .me .neck:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  top: -12px;
+  background: #ebbfad;
+  left: -18px;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.container .me .neck.look-left:before {
+  left: -38px;
+}
+.container .me .neck.look-right:before {
+  left: -5px;
+}
+.container .me .neck.look-down:before {
+  top: -5px;
+}
+.container .me .neck.look-up:before {
+  top: -22px;
+}
+.container .me .neck.look-down-right:before {
+  left: -2px;
+  top: -5px;
+}
+.container .me .neck.look-up-right:before {
+  left: -10px;
+  top: -20px;
+}
+.container .me .neck.look-down-left:before {
+  left: -38px;
+  top: -5px;
+}
+.container .me .neck.look-up-left:before {
+  left: -38px;
+  top: -20px;
+}
+.container .me .hair {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: absolute;
+  height: 170px;
+  width: 105px;
+  -moz-border-radius: 45px;
+  -webkit-border-radius: 45px;
+  border-radius: 45px;
+  background: #111427;
+  left: -12px;
+  top: -12px;
+  overflow: hidden;
+}
+.container .me .hair:after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 160px;
+  background: #070a1d;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  top: 60px;
+  left: 12px;
+}
+.container .me .hair.look-left {
+  left: -5px;
+  width: 100px;
+}
+.container .me .hair.look-right {
+  left: -17px;
+  width: 100px;
+}
+.container .me .hair.look-down {
+  top: -12px;
+  height: 165px;
+}
+.container .me .hair.look-up {
+  top: -8px;
+  height: 180px;
+}
+.container .me .hair.look-down-right {
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.container .me .hair.look-up-right {
+  left: -25px;
+  top: -8px;
+  height: 180px;
+}
+.container .me .hair.look-down-left {
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+.container .me .hair.look-up-left {
+  left: -8px;
+  top: -8px;
+  height: 180px;
+}
+.container .me .clothes {
+  background: #d09233;
+  width: 80px;
+  height: 40px;
+  -moz-border-radius: 100px 100px 10px 10px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px 100px 10px 10px;
+  top: 105px;
+  overflow: hidden;
+}
+.container .me .clothes .jumper {
+  width: 60px;
+  height: 100%;
+  top: 60%;
+  background: #607789;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.container .me .clothes .jumper:before {
+  background: #607789;
+  width: 10px;
+  height: 50px;
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0px;
+}
+.container .me .clothes .jumper:after {
+  background: #607789;
+  width: 10px;
+  height: 50px;
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 50px;
+}
+.container p {
+  color: #f25777;
+  margin-top: 180px;
+  font-family: "Archivo Black";
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.container .mouse {
+  color: #fff;
+  font-size: 30px;
+  left: 0;
+  right: 0;
+  top: 210px;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  -moz-animation: mouseAction 5s linear;
+  -webkit-animation: mouseAction 5s linear;
+  animation: mouseAction 5s linear;
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  opacity: 0;
+}
+.container .mouse i.fa {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -moz-animation: mouseAction2 5s linear;
+  -webkit-animation: mouseAction2 5s linear;
+  animation: mouseAction2 5s linear;
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  text-shadow: -4px 6px 0px rgba(0, 0, 0, 0.34);
+}
+.container p {
+  font-family: "Archivo Black";
+  color: #fff;
+  font-size: 20px;
+}
+
+@-webkit-keyframes $animationName {
+  0% {
+    opacity: 1;
+  }
+  99.9% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    -webkit-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    opacity: 0;
+  }
+}
+@-moz-keyframes mouseAction {
+  0% {
+    opacity: 1;
+  }
+  99.9% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    -webkit-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    opacity: 0;
+  }
+}
+@-ms-keyframes mouseAction {
+  0% {
+    opacity: 1;
+  }
+  99.9% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    -webkit-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    opacity: 0;
+  }
+}
+@keyframes mouseAction {
+  0% {
+    opacity: 1;
+  }
+  99.9% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    -webkit-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes $animationName {
+  100% {
+    -moz-transform: rotate(-1080deg);
+    -ms-transform: rotate(-1080deg);
+    -webkit-transform: rotate(-1080deg);
+    transform: rotate(-1080deg);
+  }
+}
+@-moz-keyframes mouseAction2 {
+  100% {
+    -moz-transform: rotate(-1080deg);
+    -ms-transform: rotate(-1080deg);
+    -webkit-transform: rotate(-1080deg);
+    transform: rotate(-1080deg);
+  }
+}
+@-ms-keyframes mouseAction2 {
+  100% {
+    -moz-transform: rotate(-1080deg);
+    -ms-transform: rotate(-1080deg);
+    -webkit-transform: rotate(-1080deg);
+    transform: rotate(-1080deg);
+  }
+}
+@keyframes mouseAction2 {
+  100% {
+    -moz-transform: rotate(-1080deg);
+    -ms-transform: rotate(-1080deg);
+    -webkit-transform: rotate(-1080deg);
+    transform: rotate(-1080deg);
+  }
+}
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="me">
+        <div class="hair"></div>
+        <div class="clothes">
+            <div class="jumper"></div>
+        </div>
+        <div class="neck"></div>
+        <div class="head">
+            <div class="bangs"></div>
+        </div>
+    </div>
+    <div class="mouse"><i class="fa fa-mouse-pointer" aria-hidden="true"></i></div>
+    <p>move</p>
+</div>
+
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    
+var classes_to_remove = ["look-right","look-left", "look-down", "look-up","look-down-right","look-down-left","look-up-right","look-up-left"];
+
+function removeClasses () {
+    for(var x = 0;x<classes_to_remove.length;x++) {
+        $(".head").removeClass(classes_to_remove[x]);
+        $(".hair").removeClass(classes_to_remove[x]);
+        $(".neck").removeClass(classes_to_remove[x]);
+    }
+}
+function direction(e) {
+    //look left
+    if( e.clientX<= window.innerWidth/2) { 
+        removeClasses();
+
+        $(".head").addClass("look-left");
+        $(".hair").addClass("look-left");
+        $(".neck").addClass("look-left");
+    }
+    //look right
+    if( e.clientX >= (window.innerWidth-(window.innerWidth/2))) { 
+        removeClasses();
+
+        $(".head").addClass("look-right");
+        $(".hair").addClass("look-right");
+        $(".neck").addClass("look-right");
+    }
+    //look down
+    if( e.clientY >= (window.innerHeight -(window.innerHeight/2.5))) {
+        removeClasses();
+
+        $(".head").addClass("look-down");
+        $(".hair").addClass("look-down");
+        $(".neck").addClass("look-down");
+    }
+
+
+    // look up  
+    if( e.clientY <= ((window.innerHeight/2.5))) { 
+        removeClasses();
+
+        $(".head").addClass("look-up");
+        $(".hair").addClass("look-up");
+        $(".neck").addClass("look-up");
+    }
+
+    // look down right 
+    if( e.clientY >= (window.innerHeight -(window.innerHeight/2.5)) && e.clientX >= (window.innerWidth-(window.innerWidth/3))) { 
+        removeClasses();
+
+        $(".head").addClass("look-down-right");
+        $(".hair").addClass("look-down-right");
+        $(".neck").addClass("look-down-right");
+    }
+
+    // look down left
+    if( e.clientY >= (window.innerHeight -(window.innerHeight/2.5)) &&  e.clientX<= window.innerWidth/3) {
+        removeClasses();
+
+        $(".head").addClass("look-down-left");
+        $(".hair").addClass("look-down-left");
+        $(".neck").addClass("look-down-left");
+    }
+
+
+    // look up right 
+    if( e.clientY <= ((window.innerHeight/2.5)) && e.clientX >= (window.innerWidth-(window.innerWidth/3))) { 
+        removeClasses();
+
+        $(".head").addClass("look-up-right");
+        $(".hair").addClass("look-up-right");
+        $(".neck").addClass("look-up-right");
+    }
+
+    // look down left
+    if( e.clientY <= ((window.innerHeight/2.5)) &&  e.clientX<= window.innerWidth/3) {
+        removeClasses();
+
+        $(".head").addClass("look-up-left");
+        $(".hair").addClass("look-up-left");
+        $(".neck").addClass("look-up-left");
+    }
+
+    if( e.clientX >  window.innerWidth/3 &&  e.clientX < (window.innerWidth - (window.innerWidth/3)) && 
+     e.clientY >  window.innerHeight/2.5 &&  e.clientY < (window.innerHeight - (window.innerHeight/2.5)) ) {
+        removeClasses();
+    }
+}
+window.addEventListener("mousemove", function (e) {
+    direction(e);
+})
+
+window.addEventListener("click", function (e) {
+    direction(e);
+})
+    
+</script>
+
+
+
+</body>
+</html>

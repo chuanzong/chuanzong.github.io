@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<link rel="stylesheet" href="http://www.jq22.com/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+<style>
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    min-height: 100%;
+    font-family: sans-serif;
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body {
+    height: 100%;
+    background-color: #252527;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+.top70 {
+    padding-top: 70px;
+}
+.m0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.bod {
+    padding-bottom: 50px;
+}
+
+.col-md-3 {
+    margin-bottom: 20px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.18);
+    position: relative;
+    transition: all 1s ease 0s;
+    overflow: hidden;
+}
+
+.ifbk {
+    height: 172px;
+    overflow: hidden;
+}
+#zt iframe {
+    width: 200%;
+    height: 200%;
+    background: white;
+    border: 0;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: top left;
+    -moz-transform: scale(0.5);
+    -moz-transform-origin: top left;
+    -ms-transform: scale(0.5);
+    -ms-transform-origin: top left;
+    -o-transform: scale(0.5);
+    -o-transform-origin: top left;
+    transform: scale(0.5);
+    transform-origin: top left;
+}
+
+.cover-info {
+    padding: 6px 15px 28px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.col-md-3 a {
+    display: block;
+}
+
+.cover-info a {
+    color: #60BDE8;
+}
+
+.cover-info h4 {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+    display: block;
+    font-weight: bold;
+    line-height: 18px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+
+.cover-info small {
+    color: #838383;
+    padding-bottom: 10px;
+}
+
+.cover-stat {
+    background-color: #f6f6f6;
+    border-radius: 0 0 3px 3px;
+    border-top: 1px solid #e7e7e7;
+    box-shadow: 0 1px 0 0 #fff inset;
+    padding: 7px 15px 7px 15px;
+    color: #8B8B8C;
+    position: relative;
+}
+
+.f10 {
+    padding-right: 12px;
+}
+
+.cover-stat span {
+    font-size: 10px;
+    font-family: "Arial";
+}
+
+/*翻页*/
+
+.posts-nav-wrap {
+    text-align: center;
+    width: 100%;
+    height: 53px;
+    margin: 20px 0 0 0;
+    display: inline-block;
+    clear: both;
+    position: relative;
+    z-index: 20;
+}
+
+.posts-nav li {
+    margin: 0 13px 0 0;
+    display: inline-block;
+}
+.posts-nav li a {
+    text-indent: -9999em;
+    text-align: left;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    -moz-transition: all .20s ease-in-out;
+    -webkit-transition: all .20s ease-in-out;
+    transition: all .20s ease-in-out;
+}
+.posts-nav .previous a {
+    width: 64px;
+    height: 53px;
+    line-height: 53px;
+    background-color: #999999;
+    background-image: url(http://www.jq22.com/img/ico-pagination-arrow-previous.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.posts-nav .previous a:hover {
+    text-decoration: none;
+    background: #ffe900 url(http://www.jq22.com/img/ico-pagination-arrow-previous.png) no-repeat 12px center;
+}
+
+.posts-nav .next a {
+    background: #999999 url(http://www.jq22.com/img/ico-pagination-arrow-next.png) no-repeat center;
+    width: 144px;
+    height: 53px;
+    line-height: 53px;
+}
+
+.posts-nav .next a:hover {
+    text-decoration: none;
+    background: #ffe900 url(http://www.jq22.com/img/ico-pagination-arrow-next.png) no-repeat 110px center;
+}
+
+
+#bg_can{
+    position: fixed;
+    width:100%;
+    top: -50px;
+    left: 0;
+    bottom: 0;
+    
+    z-index: 1;
+}
+#bg_can iframe{
+    width:100%;
+    height: 100%;
+}
+#zt{
+    position: relative;
+    z-index: 20;
+}
+</style>
+
+
+</head>
+<body>
+<div id="bg_can">    
+    <iframe  src="bg/index7.html" frameborder="0"></iframe>
+</div>
+
+<div class="container m0 bod top70" id="zt">
+    <div class="col-lg-4 col-md-3 col-sm-4">
+        <div class="ifbk">
+            <!-- <iframe scrolling="no" sandbox="allow-scripts allow-same-origin" src="code/20170606014935.html"> </iframe> -->
+        </div>
+        <div class="cover-info">
+            <a href="code946" target="_blank">
+                <h4>
+                    动画彩虹按钮
+                </h4>
+            </a>
+            <small>
+                鼠标悬停彩虹动画按钮
+            </small>
+        </div>
+        <div class="cover-stat">
+            <i class="fa fa-eye">
+            </i>
+            <span class="f10">
+                &nbsp;1102
+            </span>
+            <i class="fa fa-heart">
+            </i>
+            <span class="f10">
+                &nbsp;25
+            </span>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-3 col-sm-4">
+        <div class="ifbk">
+            <!-- <iframe scrolling="no" sandbox="allow-scripts allow-same-origin" src="code/20170606014636.html"> </iframe> -->
+        </div>
+        <div class="cover-info">
+            <a href="code945" target="_blank">
+                <h4>
+                    404概念页
+                </h4>
+            </a>
+            <small>
+                404概念页
+            </small>
+        </div>
+        <div class="cover-stat">
+            <i class="fa fa-eye">
+            </i>
+            <span class="f10">
+                &nbsp;1949
+            </span>
+            <i class="fa fa-heart">
+            </i>
+            <span class="f10">
+                &nbsp;31
+            </span>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-3 col-sm-4">
+        <div class="ifbk">
+            <!-- <iframe scrolling="no" sandbox="allow-scripts allow-same-origin" src="code/20170604224938.html"> </iframe> -->
+        </div>
+        <div class="cover-info">
+            <a href="code944" target="_blank">
+                <h4>
+                    斑点
+                </h4>
+            </a>
+            <small>
+                CSS斑点
+            </small>
+        </div>
+        <div class="cover-stat">
+            <i class="fa fa-eye">
+            </i>
+            <span class="f10">
+                &nbsp;1070
+            </span>
+            <i class="fa fa-heart">
+            </i>
+            <span class="f10">
+                &nbsp;13
+            </span>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-3 col-sm-4">
+        <div class="ifbk">
+            <!-- <iframe scrolling="no" sandbox="allow-scripts allow-same-origin" src="code/20170604223944.html"> </iframe> -->
+        </div>
+        <div class="cover-info">
+            <a href="code942" target="_blank">
+                <h4>
+                    弹性双摆
+                </h4>
+            </a>
+            <small>
+                弹性双摆怎么样？ 弹力，重力和粘度！
+            </small>
+        </div>
+        <div class="cover-stat">
+            <i class="fa fa-eye">
+            </i>
+            <span class="f10">
+                &nbsp;1098
+            </span>
+            <i class="fa fa-heart">
+            </i>
+            <span class="f10">
+                &nbsp;14
+            </span>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-3 col-sm-4">
+        <div class="ifbk">
+            <!-- <iframe scrolling="no" sandbox="allow-scripts allow-same-origin" src="code/20170604223054.html"> </iframe> -->
+        </div>
+        <div class="cover-info">
+            <a href="code941" target="_blank">
+                <h4>
+                    情感粒子
+                </h4>
+            </a>
+            <small>
+                情感粒子，表情碰撞
+            </small>
+        </div>
+        <div class="cover-stat">
+            <i class="fa fa-eye">
+            </i>
+            <span class="f10">
+                &nbsp;1309
+            </span>
+            <i class="fa fa-heart">
+            </i>
+            <span class="f10">
+                &nbsp;17
+            </span>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-3 col-sm-4">
+        <div class="ifbk">
+            <!-- <iframe scrolling="no" sandbox="allow-scripts allow-same-origin" src="code/20170602015731.html"> </iframe> -->
+        </div>
+        <div class="cover-info">
+            <a href="code940" target="_blank">
+                <h4>
+                    分层字符
+                </h4>
+            </a>
+            <small>
+                CSS分层字符
+            </small>
+        </div>
+        <div class="cover-stat">
+            <i class="fa fa-eye">
+            </i>
+            <span class="f10">
+                &nbsp;950
+            </span>
+            <i class="fa fa-heart">
+            </i>
+            <span class="f10">
+                &nbsp;13
+            </span>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-3 col-sm-4">
+        <div class="ifbk">
+            <!-- <iframe scrolling="no" sandbox="allow-scripts allow-same-origin" src="code/20170602015514.html"> </iframe> -->
+        </div>
+        <div class="cover-info">
+            <a href="code939" target="_blank">
+                <h4>
+                    按钮悬停动画
+                </h4>
+            </a>
+            <small>
+                css按钮悬停动画
+            </small>
+        </div>
+        <div class="cover-stat">
+            <i class="fa fa-eye">
+            </i>
+            <span class="f10">
+                &nbsp;1159
+            </span>
+            <i class="fa fa-heart">
+            </i>
+            <span class="f10">
+                &nbsp;47
+            </span>
+        </div>
+    </div>
+</div>
+<div class="posts-nav-wrap">
+    <ul class="posts-nav">
+        <li class="previous">
+            <a href="javaScript:void(0);" class="previous">
+                ←
+            </a>
+        </li>
+        <li class="next">
+            <a href="javaScript:void(0);" class="next">
+                ←
+            </a>
+        </li>
+    </ul>
+</div>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+  $(function(){
+    $(window).resize(function(){
+      $("#bg_can iframe").attr("src",$("#bg_can iframe").attr("src"))
+    });
+
+    tdata = [{
+                "url":"xg_1.html"
+                ,"name":"三维倾斜"
+                ,"desc":"鼠标悬停，三维倾斜"
+            }
+            ,{
+                "url":"xg_2.html"
+                ,"name":"SVG阶梯背景生成器"
+                ,"desc":"SVG阶梯背波浪背景生成器"                
+            }
+            ,{
+                "url":"xg_3.html"
+                ,"name":"CSS自定义输入框"
+                ,"desc":"CSS自定义placeholder提示效果"                
+            }
+            ,{
+                "url":"xg_4.html"
+                ,"name":"CSS Milky Loader"
+                ,"desc":"CSS像牛奶的加载，filer兼容问题"
+            }
+            ,{
+                "url":"xg_5.html"
+                ,"name":"纯Css方向悬停"
+                ,"desc":"纯Css方向悬停，可表示9个位置"
+            }
+            ,{
+                "url":"xg_6.html"
+                ,"name":"鼠标进入方向判定"
+                ,"desc":"内部css变现错开，判定进入位置"
+            }
+            ,{
+                "url":"xg_7.html"
+                ,"name":"SVG路径文本动画"
+                ,"desc":"SVG路径文本动画"
+            }
+            ,{
+                "url":"xg_8.html"
+                ,"name":"粒子星空背景动画"
+                ,"desc":"一个充满星星的天空"
+            }
+            ,{
+                "url":"xg_9.html"
+                ,"name":"CSS移动菜单"
+                ,"desc":"纯CSS 3d立体移动菜单"
+            },{
+                "url":"xg_10.html"
+                ,"name":"CSS猫头鹰"
+                ,"desc":"CSS猫头鹰,眼睛会跟着你的鼠标移动"
+            },{
+                "url":"xg_11.html"
+                ,"name":"分层字符"
+                ,"desc":"CSS分层字符"
+            },{
+                "url":"xg_12.html"
+                ,"name":"CSS模态框"
+                ,"desc":"纯CSS模态框>IE8,不用任何js实现"
+            },{
+                "url":"xg_13.html"
+                ,"name":"悬停效果"
+                ,"desc":"悬停效果 - 抓住他 ，你可以的"
+            },{
+                "url":"xg_14.html"
+                ,"name":"CSS鼠标滚动动画"
+                ,"desc":"网站提示鼠标滚动Css动画"
+            },{
+                "url":"xg_15.html"
+                ,"name":"按钮悬停效果集合"
+                ,"desc":"按钮悬停效果集合"
+            },{
+                "url":"xg_16.html"
+                ,"name":"html5 粒子放射效果"
+                ,"desc":"html5 粒子放射效果"
+            },{
+                "url":"xg_17.html"
+                ,"name":"CSS APP天气应用"
+                ,"desc":"CSS APP动画天气应用"
+            },{
+                "url":"xg_18.html"
+                ,"name":"纯CSS切换"
+                ,"desc":"纯CSS开关切换"
+            },{
+                "url":"xg_19.html"
+                ,"name":"CSS视差星空背景"
+                ,"desc":"CSS视差星空背景,字体渐变webkit"
+            },{
+                "url":"xg_21.html"
+                ,"name":"鼠标跟随"
+                ,"desc":"鼠标跟随，转头(jQ)"
+            },{
+                "url":"xg_22.html"
+                ,"name":"Three js 3D鼠标跟随"
+                ,"desc":"Three js 3D鼠标跟随"
+            },{
+                "url":"xg_23.html"
+                ,"name":"css3 svg天气预报图标动画特效"
+                ,"desc":"css3 svg天气预报图标动画特效"
+            },{
+                "url":"xg_24.html"
+                ,"name":"SVG 图像加载"
+                ,"desc":"SVG 图像加载"
+            },{
+                "url":"xg_25.html"
+                ,"name":"滚动图标动画"
+                ,"desc":"滚动图标动画"
+            },{
+                "url":"xg_26.html"
+                ,"name":"CSS3D纸折的文字效果"
+                ,"desc":"CSS3D纸折的文字效果"
+            }]
+    
+
+
+
+    var ista = 0;//开始位置
+    var iend = 8;//结束位置tdata.length
+    addIfr(0,8)
+
+    
+    $("li.previous").hide()
+    $("li.previous").click(function(){
+        $("li.next").show()
+        ista -= 8;
+        iend = ista+8;
+        if(ista<1){
+            $("li.previous").hide()
+            ista = 0;
+        }
+        addIfr(ista,iend)
+    })
+    $("li.next").click(function(){
+        ista += 8;
+        iend = ista+8;
+        $("li.previous").show()
+        if(iend>tdata.length){
+            $("li.next").hide()
+            iend = tdata.length;
+        }
+        addIfr(ista,iend)
+    })
+function addIfr(i1,i2){// i1开始位置,i2结束位置
+
+    $("#zt").empty();
+    for(var i=i1;i<i2;i++){
+        console.log(tdata[i])
+
+        var tcankan = parseInt(Math.random()*2000)
+        var thtml ='<div class="col-lg-4 col-md-3 col-sm-4">'
+                    +'<div class="ifbk">'
+                    +    '<iframe scrolling="no" sandbox="allow-scripts allow-same-origin" src="exp/'+tdata[i].url+'"> </iframe>'
+                    +'</div>'
+                    +'<div class="cover-info">'
+                    +    '<a href="exp/'+tdata[i].url+'" target="_blank">'
+                    +        '<h4>'
+                    +           tdata[i].name
+                    +        '</h4>'
+                    +    '</a>'
+                    +    '<small>'
+                    +        tdata[i].desc
+                    +    '</small>'
+                    +'</div>'
+                    +'<div class="cover-stat">'
+                    +   ' <i class="fa fa-eye"> </i>'
+                    +    '<span class="f10">'
+                    +       ' &nbsp;'+tcankan
+                    +    '</span>'
+                    +    '<i class="fa fa-heart"> </i>'
+                    +    '<span class="f10">'
+                    +       ' &nbsp;'+parseInt(Math.random()*tcankan)
+                    +   '</span>'
+                    +'</div>'
+                +'</div>'
+        $("#zt").append(thtml)
+    }
+    console.clear()
+}
+
+  })
+</script>
+
+
+</body>
+</html>

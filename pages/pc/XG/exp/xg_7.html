@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+body,
+html,
+div {
+  background: #5677fc;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+body{
+    overflow: hidden;
+}
+svg {
+  width: 600px;
+  height: 400px;
+  cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+path {
+  fill: none;
+  -webkit-transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -moz-transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -o-transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -ms-transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke: #f5f6f7;
+  stroke-dashoffset: 0px;
+  stroke-dasharray: 0px 1180px;
+}
+.text path.d-1 {
+  stroke-dashoffset: -149px;
+  stroke-dasharray: 22px 1180px;
+}
+.text path.d-2 {
+  stroke-dashoffset: -201.3px;
+  stroke-dasharray: 49px 1180px;
+}
+.text path.e-1 {
+  stroke-dashoffset: -377.5px;
+  stroke-dasharray: 14px 1180px;
+}
+.text path.e-2 {
+  stroke-dashoffset: -431.2px;
+  stroke-dasharray: 43px 1180px;
+}
+.text path.s-1 {
+  stroke-dashoffset: -526px;
+  stroke-dasharray: 37px 1180px;
+}
+.text path.i-1 {
+  stroke-dashoffset: -631px;
+  stroke-dasharray: 0.1px 1180px;
+}
+.text path.i-2 {
+  stroke-dashoffset: -637.5px;
+  stroke-dasharray: 16px 1180px;
+}
+.text path.g-1 {
+  stroke-dashoffset: -732.5px;
+  stroke-dasharray: 15px 1180px;
+}
+.text path.g-2 {
+  stroke-dashoffset: -812px;
+  stroke-dasharray: 69px 1180px;
+}
+.text path.n-1 {
+  stroke-dashoffset: -941px;
+  stroke-dasharray: 17px 1180px;
+}
+.text path.n-2 {
+  stroke-dashoffset: -1013px;
+  stroke-dasharray: 33.5px 1180px;
+}
+        
+    </style>
+</head>
+<body>
+  <div>
+  <svg viewBox="0 0 300 200">
+    <path class="motion" d="
+      M  0,  0
+      C  0,  0  99,  1  99, 89
+      L 99,111
+      C 99,130  75,112  99,112
+      C103,112 100,112 106,112
+      C121,112 121, 89 105, 89
+      C 88, 89 102, 89  99, 89
+      C  0, 89  80,103 123,103
+      C128,103 135,103 136,103
+      C155,103 137,140 137,103
+      C137, 92 123, 93 123,103
+      C123,115 135,113 137,110
+      C152, 86 103, 87 143,110
+      C152,116 157,106 147,103
+      C140,102 143, 93 152, 96
+      C206,118 159.5,50 159,89
+      L159,112
+      C159,180 117, 93 168,118
+      C176,122 180,116 180,115
+      C183,107 169,101 168, 90
+      C167, 77 180, 67 180, 95
+      L180,103
+      C180,115 166,115 166,103
+      C166, 92 180, 94 180,102
+      C180,180 188,125 188,112
+      C188,110 188,100 188, 96
+      C188, 91 189, 80 194, 91
+      C200,101 186,134 188,106
+      C189, 93 201, 93 201,100
+      C201,105 201,105 201,112
+      C201,130 220,160 300, 80
+    "></path>
+  </svg>
+</div>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+    (function() {
+  var charParts, i, j, len, part, partElem, resize;
+
+  charParts = ["d-1", "d-2", "e-1", "e-2", "s-1", "i-1", "i-2", "g-1", "g-2", "n-1", "n-2"];
+
+  partElem = $("path");
+
+  for (j = 0, len = charParts.length; j < len; j++) {
+    part = charParts[j];
+    $("svg").append(partElem.clone().attr("class", part));
+  }
+
+  i = setInterval(function() {
+    return $("div").toggleClass("text");
+  }, 7000);
+
+  setTimeout(function() {
+    return $("div").toggleClass("text");
+  }, 100);
+
+  $("div").click(function() {
+    clearInterval(i);
+    return $("div").toggleClass("text");
+  });
+
+  resize = function() {
+    return $("body").css({
+      "margin-top": ~~((window.innerHeight - 400) / 2) + "px"
+    });
+  };
+
+  $(window).resize(resize);
+
+  resize();
+
+}).call(this);
+</script> 
+</body>
+</html>

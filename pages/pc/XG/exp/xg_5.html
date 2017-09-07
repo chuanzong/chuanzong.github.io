@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5rem;
+  width: 9rem;
+  position: relative;
+}
+
+.cell {
+  flex-basis: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  font-size: 0.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  cursor: default;
+}
+
+.targetContainer {
+  z-index: 0;
+}
+
+.target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 1px solid #efefef;
+}
+
+.cell:nth-child(1) {
+  order: 1;
+}
+
+.cell:nth-child(2) {
+  order: 2;
+}
+
+.cell:nth-child(3) {
+  order: 3;
+}
+
+.cell:nth-child(4) {
+  order: 4;
+}
+
+.cell:nth-child(5) {
+  order: 6;
+}
+
+.cell:nth-child(6) {
+  order: 7;
+}
+
+.cell:nth-child(7) {
+  order: 8;
+}
+
+.cell:nth-child(8) {
+  order: 9;
+}
+
+.cell:nth-child(9) {
+  order: 10;
+}
+
+.cell:nth-child(9) {
+  order: 4;
+}
+
+.cell {
+  background-color: transparent;
+}
+.cell.dir:nth-child(1):hover ~ .cell.targetContainer .target {
+  background-image: linear-gradient(135deg, #ff5f1f 0%, transparent 70%);
+}
+.cell.dir:nth-child(2):hover ~ .cell.targetContainer .target {
+  background-image: linear-gradient(180deg, #ff5f1f 0%, transparent 70%);
+}
+.cell.dir:nth-child(3):hover ~ .cell.targetContainer .target {
+  background-image: linear-gradient(225deg, #ff5f1f 0%, transparent 70%);
+}
+.cell.dir:nth-child(4):hover ~ .cell.targetContainer .target {
+  background-image: linear-gradient(90deg, #ff5f1f 0%, transparent 70%);
+}
+.cell.dir:nth-child(5):hover ~ .cell.targetContainer .target {
+  background-image: linear-gradient(270deg, #ff5f1f 0%, transparent 70%);
+}
+.cell.dir:nth-child(6):hover ~ .cell.targetContainer .target {
+  background-image: linear-gradient(45deg, #ff5f1f 0%, transparent 70%);
+}
+.cell.dir:nth-child(7):hover ~ .cell.targetContainer .target {
+  background-image: linear-gradient(0deg, #ff5f1f 0%, transparent 70%);
+}
+.cell.dir:nth-child(8):hover ~ .cell.targetContainer .target {
+  background-image: linear-gradient(-45deg, #ff5f1f 0%, transparent 70%);
+}
+.cell .target:hover {
+  background-image: radial-gradient(ellipse at center, #ff5f1f 0%, rgba(0, 0, 0, 0) 110%);
+}
+
+label {
+  font-family: Arial;
+  color: #333;
+}
+
+input#dirnum:checked ~ div.container .dir {
+  color: transparent;
+}
+
+
+        
+    </style>
+</head>
+<body>
+<input id="dirnum" type="checkbox"/>
+<label for="dirnum">Hide Direction Numbers</label>
+<div class="container">
+  <div class="cell dir">1</div>
+  <div class="cell dir">2</div>
+  <div class="cell dir">3</div>
+  <div class="cell dir">4</div>
+  <div class="cell dir">5</div>
+  <div class="cell dir">6</div>
+  <div class="cell dir">7</div>
+  <div class="cell dir">8</div>
+  <div class="cell targetContainer">
+    <div class="target">TARGET</div>
+  </div>
+</div>    
+</body>
+</html>
