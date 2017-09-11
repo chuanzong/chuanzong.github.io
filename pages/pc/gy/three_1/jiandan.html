@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图形</title>
+    <style>
+        html{
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background-color: #aaa;
+            margin: 0px;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        #three_Box{
+            width: 100%;
+            height: 100%;
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="three_Box" style=""></div>
+    <script src="three.min.js"></script>
+
+
+    <script>
+        
+
+
+var cube, renderer, scene, camera, controls,mesh_qiu;
+
+    renderer = new THREE.WebGLRenderer({ alpha: false ,antialias: !1});
+
+    renderer.setSize( three_Box.getBoundingClientRect().width, three_Box.getBoundingClientRect().height );
+
+    three_Box.appendChild( renderer.domElement );
+
+    scene = new THREE.Scene();
+
+    camera = new THREE.PerspectiveCamera( 19, three_Box.getBoundingClientRect().width / three_Box.getBoundingClientRect().height, 1, 10000 );
+    camera.position.set( -100, 300, -150 );
+    camera.up.x = 0;
+    camera.up.y = 0; //相机朝向--相机上方为y轴
+    camera.up.z = -1;
+    camera.lookAt({x:0,y:10,z:0});
+
+    
+    // ambient
+    // scene.add( new THREE.AmbientLight( 0x222222 ) );
+    
+    // light
+    var spotLight = new THREE.PointLight( 0xffffff );
+    spotLight.position.set(-50, 300, -100  );
+    scene.add( spotLight );
+    
+
+
+    
+    
+
+    // 空间长方体设置
+    var geometry = new THREE.CubeGeometry(50,50,50);
+    var material = new THREE.MeshLambertMaterial( { color: 0xFFFFFF } );
+    cube = new THREE.Mesh( geometry, material );
+    scene.add( cube );
+
+
+
+
+    renderer.render( scene, camera );
+
+
+
+
+
+
+    </script>
+</body>
+</html>
