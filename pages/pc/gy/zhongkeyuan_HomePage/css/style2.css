@@ -1,0 +1,176 @@
+
+.item{
+	width:1204px;
+	margin: 0 auto;
+	position: relative;
+}
+.product{
+	min-height:742px;
+}
+.item h1{
+	height:66px;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 66px;
+}
+/*.item h1.sc{
+	width:205px;
+	background:url(http://www.datatang.com/img/index/title_products.png) no-repeat;
+	margin-top: 95px;
+}*/
+/*.fw{
+	width:257px;
+	background:url(http://www.datatang.com/img/index/title_advantgage.png) no-repeat;
+}*/
+
+.item h1.sc{
+	width:205px;
+	/*background:url(http://www.datatang.com/img/index/title_products.png) no-repeat;*/
+	margin-top: 30px;
+	font-size: 35px;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+.item .item-line{
+	position: absolute;
+	width:315px;
+	height:1px;
+	background:#c4c4c4;
+	left:50%;
+	margin-left: -158px;
+	top:56px;
+}
+.list{
+	min-height:196px;
+	margin-top: 30px;
+}
+.list h2{
+	font-size: 16px;
+	border-left-width:3px;
+	border-left-style: solid;
+	color:#333;
+	margin-bottom: 10px;
+	width:101px;
+	padding-left: 7px;
+	position: relative;
+}
+.list h2 span{
+	position: absolute;;
+	width:23px;
+	height:13px;
+	text-align: center;
+	line-height: 13px;
+	background:#ff6309;
+	border-radius: 2px;
+	color:#fff;
+	font-size: 8px;
+	right: 2px;
+	top:2px;
+
+}
+.list .p{
+	width:416px;
+	font-size: 12px;
+	line-height: 26px;
+	color: #8d8d8d;
+}
+.list>div{
+	height:98px;
+	padding-left: 10px;
+}
+.list-top>div{
+	width:49%;
+	display:inline-block;
+}
+.list-bottom>div{
+	width:49%;
+	display:inline-block;
+}
+
+div.pic{
+	width:100%;
+	height: 640px; 
+	/*background:#fff;*/
+	padding: 0;
+	padding-top: 4px;
+	position: relative;
+}
+
+.pic-lock{
+	height:578px;
+	overflow: hidden;
+}
+.pic dl{
+	float: left;
+	width:274px;
+	height:270px;
+	margin: 15px 8px 0 17px;
+	cursor: pointer;
+}
+.pic dl dt{
+	width:274px;
+	height:154px;
+	margin-bottom: 14px;
+	overflow: hidden;
+}
+.pic dl dt img{
+	width:100%;
+	height:100%;
+}
+div.pic img:hover{
+	-webkit-transition:all 1s;
+	-webkit-transform:scale(1.2);/*1.2指的是放大的倍数*/
+}
+.pic dl dd{
+	width: 262px;
+	padding-left: 12px;
+}
+.pic h3{
+	font-size: 16px;
+	color:#333;
+	height:26px;
+	line-height: 26px;
+	font-weight: normal;
+	margin: 16px 0 14px 0;
+}
+.pic p{
+	position:relative;
+	line-height: 20px;
+	font-size: 12px;
+	color:#666;
+	height:40px;
+	overflow : hidden; 
+  	text-overflow: ellipsis;
+  	display: -webkit-box;
+  	-webkit-line-clamp: 2;
+  	-webkit-box-orient: vertical; 
+}
+.pic p:after {
+    content:"";
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+.more{
+	width:184px;
+	height:50px;
+	/*border:1px solid #ddd;*/
+	text-indent: 50px;
+	line-height: 50px;
+	color:#666;
+	cursor: pointer;
+	font-size: 16px;
+	background: url(../img/icon/unfold.png) no-repeat 120px center;
+	/*border-radius: 25px;*/
+	margin:0 auto;
+	margin-top: 20px;
+}
+.more:hover{
+	color:#0078d0;
+}
+.more span{
+	color:#8d8d8d;
+	padding:0 5px;
+}

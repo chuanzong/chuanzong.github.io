@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>沃迪</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/date.css">
+</head>
+<body>
+	<div class="contain">
+		<!-- 上部 标题栏 -->
+		<div class="header">
+			<div class="wx-log left">
+				<img src="img/logo.png" alt="">
+			</div>
+			<div class="wx-tit">
+				沃迪生产线可视化系统
+			</div>
+			<div class="wx-user right">
+				<div class="wx-tool">
+					<img src="img/user-tool.png" alt="">
+				</div>
+				
+				<div class="wx-name">
+					<div class="wx-name-s">王珊珊</div>
+					<div class="wx-name-x">管理员</div>
+				</div>
+				<div class="wx-tx">
+					<img src="img/user-tx.png" alt="">
+				</div>					
+				<div class="wx-tim">2017-04-20 星期四 09:51:18</div>
+			</div>
+			<ul class="dropdown-menu">
+			    <li><a href="javascript:;" id="forgetPsw_btn">进入控制台 </a></li>
+			    <li class="divider"></li>
+			    <li><a href="javascript:;">退出</a></li>
+			</ul>
+
+		</div>
+		<!-- 中间 模型 -->
+		<div class="main-b">
+			<!--默认运行， yq-stop 停止，yq-waring 警告 -->
+			<div class="yuanhuan yq-waring"></div>
+			<div class="yuanquan" style="text-align: center;">
+				<img src="img/wd_mx1.gif" alt="模型" style="width: 51%;height: 52%;position: relative;top: 77px;">
+				<div style="color:#fff;text-align: center;width: 100%; position: absolute;bottom: 8%;">工位号：12345678</div>
+			</div>
+			<div class="binggan-con">				
+				<div class="binggan-b">
+					<div class="binggan"></div>
+					<div class="binggan"></div>
+					<div class="binggan"></div>
+					<div class="binggan"></div>
+				</div>
+			</div>
+			<!-- 转动圆环 -->
+			<div class="yq-b">
+				<!-- 左上 -->
+				<div class="yuanq-c">					
+					<div class="yuanq-b">
+						<div class="yuanq-1"></div>
+						<div class="yuanq-2"></div>
+						<div class="yuanq-3"></div>
+						<div class="yq-num">3h15m</div>
+					</div>
+					<div class="yuanq-wz">
+						<div class="yuanq-wz-x">本次运行时间</div>
+						<div class="yuanq-wz-l1"></div>
+						<div class="yuanq-wz-l2"></div>
+					</div>
+				</div>
+				<!-- 左下 -->
+				<div class="yuanq-c2">	
+					<div class="yuanq-b2">
+						<div class="yuanq-1"></div>
+						<div class="yuanq-2"></div>
+						<div class="yuanq-3"></div>
+						<div class="yq-num">3h15m</div>
+					</div>
+					<div class="yuanq-wz">
+						<div class="yuanq-wz-x">总运行时间</div>
+						<div class="yuanq-wz-l1"></div>
+						<div class="yuanq-wz-l2"></div>
+					</div>
+				</div>
+				<!-- 右一 -->
+				<div class="yuanq-c3">
+					<div class="yuanq-b3">
+						<div class="yuanq-1"></div>
+						<div class="yuanq-2"></div>
+						<div class="yuanq-3"></div>
+						<div class="yq-num">400个</div>
+					</div>
+					<div class="yuanq-wz">
+						<div class="yuanq-wz-x">总剔除数</div>
+						<div class="yuanq-wz-l1"></div>
+						<div class="yuanq-wz-l2"></div>
+					</div>
+				</div>
+			</div>
+			<div class="gw-b">
+				<div class="gw-group">					
+					<div class="gongwei gw-z2 gj">
+						<img src="img/wd_mx3.gif" alt="模型" style="width: 77%;height: 78%;position: relative;top: -10px;">
+					</div>
+					<div class="gongwei gw-z1 gj">
+						<img src="img/wd_mx2.gif" alt="模型" style="width: 77%;height: 78%;position: relative;top: -10px;">
+					</div>
+					<div class="gongwei gw-dq gj">
+						<img src="img/wd_mx1.gif" alt="模型" style="width: 77%;height: 78%;position: relative;top: -10px;">
+					</div>
+					<div class="gongwei gw-y1 gj">
+						<img src="img/wd_mx4.gif" alt="模型" style="width: 77%;height: 78%;position: relative;top: -10px;">
+					</div>
+					<div class="gongwei gw-y2 gj">
+						<img src="img/wd_mx5.gif" alt="模型" style="width: 77%;height: 78%;position: relative;top: -10px;">
+					</div>
+
+					<div class="gongwei gw-qt gj">
+						<img src="img/wd_mx6.gif" alt="模型" style="width: 77%;height: 78%;position: relative;top: -10px;">
+					</div>
+					<div class="gongwei gw-qt gj">
+						<img src="img/wd_mx7.gif" alt="模型" style="width: 77%;height: 78%;position: relative;top: -10px;">
+					</div>
+					<div class="gongwei gw-qt gj">
+						<img src="img/wd_mx8.gif" alt="模型" style="width: 77%;height: 78%;position: relative;top: -10px;">
+					</div>
+					<div class="gongwei gw-qt gj">
+						<img src="img/wd_mx9.gif" alt="模型" style="width: 77%;height: 78%;position: relative;top: -10px;">
+					</div>
+					<div class="gongwei gw-qt gj">
+						<img src="img/wd_mx10.gif" alt="模型" style="width: 77%;height: 78%;position: relative;top: -10px;">
+					</div>
+					<div class="gongwei gw-qt gj">
+						<img src="img/wd_mx11.gif" alt="模型" style="width: 77%;height: 78%;position: relative;top: -10px;">
+					</div>
+
+					<!-- <div class="gongwei gw-qt gj">
+						<img src="img/mx.png" alt="模型">
+					</div> -->
+				</div>
+			</div>
+   
+		</div>
+		<!-- 下方 项目 -->
+		<div class="xmbtn-b clearfix">
+			<div class="xmbtn-next">&nbsp;</div>
+
+			<div class="xmbtn">
+				<img src="img/btn1.png" alt="">
+				<p>生产计划</p>
+			</div>
+			<div class="xmbtn">
+				<img src="img/btn10.png" alt="">
+				<p>设备点检</p>
+			</div>
+			<div class="xmbtn">
+				<img src="img/btn2.png" alt="">
+				<p>物料管理</p>
+			</div>
+			<div class="xmbtn">
+				<img src="img/btn3.png" alt="">
+				<p>作业管理</p>
+			</div>
+			<div class="xmbtn">
+				<img src="img/btn4.png" alt="">
+				<p>质量管理</p>
+			</div>
+			<div class="xmbtn">
+				<img src="img/btn5.png" alt="">
+				<p>可最溯性</p>
+			</div>
+			<div class="xmbtn">
+				<img src="img/btn6.png" alt="">
+				<p>设备管理</p>
+			</div>
+			<div class="xmbtn">
+				<img src="img/btn7.png" alt="">
+				<p>人员管理</p>
+			</div>
+			<div class="xmbtn">
+				<img src="img/btn8.png" alt="">
+				<p>数字化管理</p>
+			</div>
+			<div class="xmbtn">
+				<img src="img/btn8.png" alt="">
+				<p>1数字化管理</p>
+			</div>
+			<div class="xmbtn">
+				<img src="img/btn8.png" alt="">
+				<p>2数字化管理</p>
+			</div>
+			<div class="xmbtn-prev">&nbsp;</div>
+		</div>
+		
+		<!-- 左边栏 -->
+		<div class="side-left">
+				<div class="side-left-show" show="wx-zt-box"></div>
+				<div class="side-left-show" show="wx-nl-box"></div>
+				<div class="side-left-show" show="wx-bj-box"></div>				
+			<div class="wx-zt-box" name="wx-zt-box">
+				<div class="hide-box"></div>
+				<div class="s-l-tit">整体</div>
+				<div class="s-l-scroll">					
+					<div class="s-l-group">
+						<div class="s-l-g-tit">OEE:</div>
+						<div class="s-l-g-jz">
+							<div class="s-l-g-jz-b">
+								<div class="s-l-g-jz-t" style="width:60.97%"></div>
+							</div>
+							<div class="s-l-g-jz-s">60.97%</div>
+						</div>
+					</div>
+					<div class="s-l-group">
+						<div class="s-l-g-tit">良品率:</div>
+						<div class="s-l-g-jz">
+							<div class="s-l-g-jz-b">
+								<div class="s-l-g-jz-t" style="width:95.34%"></div>
+							</div>
+							<div class="s-l-g-jz-s">95.34%</div>
+						</div>
+					</div>
+					<div class="s-l-group">
+						<div class="s-l-g-tit">工单达成率:</div>
+						<div class="s-l-g-jz">
+							<div class="s-l-g-jz-b">
+								<div class="s-l-g-jz-t" style="width:70.62%"></div>
+							</div>
+							<div class="s-l-g-jz-s">70.62%</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="wx-nl-box" name="wx-nl-box">
+				<div class="hide-box"></div>
+				<div class="s-l-tit">能量消耗</div>
+				<div class="s-l-scroll">
+					<div class="s-l-group">
+						<div class="s-l-g-tit">今日产量:</div>
+						<div class="s-l-g-num">666箱</div>
+					</div>
+					<div class="s-l-group">
+						<div class="s-l-g-tit">耗气量:</div>
+						<div class="s-l-g-num">345 NL/min</div>
+					</div>
+					<div class="s-l-group">
+						<div class="s-l-g-tit">耗电量:</div>
+						<div class="s-l-g-num">345 KW▪h</div>
+					</div>
+				</div>
+			</div>
+			<div class="wx-bj-box" name="wx-bj-box">
+				<div class="hide-box"></div>
+				<div class="s-l-tit">补给物料</div>
+				<div class="s-l-group">
+					<div class="s-l-g-tit">托盘:</div>
+					<div class="s-l-g-ding s-l-g-ding-g"></div>
+				</div>
+				<div class="s-l-group">
+					<div class="s-l-g-tit">包装盒:</div>
+					<div class="s-l-g-ding s-l-g-ding-o"></div>
+				</div>
+				<div class="s-l-group">
+					<div class="s-l-g-tit">包装箱:</div>
+					<div class="s-l-g-ding s-l-g-ding-o"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 右边栏 -->
+		<div class="side-right">
+			<div class="side-right-show" show="wx-wz-box"></div>
+			<div class="side-right-show" show="wx-gw-box"></div>
+			<div class="side-right-show" show="wx-wb-box"></div>
+			<div class="wx-wz-box" name="wx-wz-box">
+				<div class="hide-box"></div>
+				<div class="s-r-tit">工作状态</div>
+				<div class="s-r-head">
+					<div class="s-r-tr">
+						<div class="s-r-th">故障工位</div>
+						<div class="s-r-th">故障时间</div>
+						<div class="s-r-th">详情链接</div>
+					</div>
+				</div>
+				<div class="s-r-body">
+					<div class="s-r-tr">
+						<div class="s-r-td s-r-td-red">
+							<span>次品剔除</span>
+						</div>
+						<div class="s-r-td">
+							<span>2017-4-12 14:37</span>
+						</div>
+						<div class="s-r-td">
+							<span class="s-r-yan"></span>
+						</div>
+					</div>
+					<div class="s-r-tr">
+						<div class="s-r-td">
+							<span>装盘机器人1装盘机器人1</span>
+						</div>
+						<div class="s-r-td">
+							<span>2017-4-12 14:37</span>
+						</div>
+						<div class="s-r-td">
+							<span class="s-r-yan"></span>
+						</div>
+					</div>
+					<div class="s-r-tr">
+						<div class="s-r-td">
+							<span>装盘机器人3</span>
+						</div>
+						<div class="s-r-td">
+							<span>2017-4-12 14:37</span>
+						</div>
+						<div class="s-r-td">
+							<span class="s-r-yan"></span>
+						</div>
+					</div>
+					<div class="s-r-tr">
+						<div class="s-r-td">
+							<span>装盘机器人5</span>
+						</div>
+						<div class="s-r-td">
+							<span>2017-4-12 14:37</span>
+						</div>
+						<div class="s-r-td">
+							<span class="s-r-yan"></span>
+						</div>
+					</div>
+					<div class="s-r-tr">
+						<div class="s-r-td">
+							<span>装盘机器人8</span>
+						</div>
+						<div class="s-r-td">
+							<span>2017-4-12 14:37</span>
+						</div>
+						<div class="s-r-td">
+							<span class="s-r-yan"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wx-gw-box" name="wx-gw-box">
+				<div class="hide-box"></div>
+				<div class="s-r-tit">工位：次品剔除（主）装盘（附）</div>
+				<div class="s-r-scroll">
+					<div class="s-r-group">
+						<div class="s-r-g-tit">本次剔除数:</div>
+						<div class="s-r-g-num">300 个</div>
+					</div>
+					<div class="s-r-group">
+						<div class="s-r-g-tit">剔除周期:</div>
+						<div class="s-r-g-num">2h</div>
+					</div>
+					<div class="s-r-group">
+						<div class="s-r-g-tit">总取盘数:</div>
+						<div class="s-r-g-num">800盘</div>
+					</div>
+					<div class="s-r-group">
+						<div class="s-r-g-tit">本次取盘数:</div>
+						<div class="s-r-g-num">200盘</div>
+					</div>
+					<div class="s-r-group">
+						<div class="s-r-g-tit">装盘周期:</div>
+						<div class="s-r-g-num">10h</div>
+					</div>
+					<div class="s-r-group">
+						<div class="s-r-g-tit">本次剔除数:</div>
+						<div class="s-r-g-num">300 个</div>
+					</div>
+					<div class="s-r-group">
+						<div class="s-r-g-tit">剔除周期:</div>
+						<div class="s-r-g-num">2h</div>
+					</div>
+					<div class="s-r-group">
+						<div class="s-r-g-tit">本次剔除数:</div>
+						<div class="s-r-g-num">300 个</div>
+					</div>
+					<div class="s-r-group">
+						<div class="s-r-g-tit">剔除周期:</div>
+						<div class="s-r-g-num">2h</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="wx-wb-box" name="wx-wb-box">
+				<div class="hide-box"></div>
+				<div class="s-r-tit">维保信息</div>
+				<div class="s-r-group time1">
+					机器第1次保养时间：
+				</div>
+				<div class="s-r-group time2" style="">
+					机器第2次保养时间：
+				</div>					
+				<div class="s-r-group time3" style="">
+					机器第3次保养时间：
+				</div>
+
+				<div class="s-r-group">
+<div class="EightycloudsFlipTimer" style="">
+	<div class="block days">
+		<!-- 2 -->
+	    <div class="block_left block_">
+	        <div class="block_left_top">
+	            <div class="block_left_top_count _count">2</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_left_bottom">
+	            <div class="block_left_bottom_count _count">2</div>
+	        </div>
+	        <div class="block_effect1 left"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+		<!-- 0 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">0</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">0</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <!-- 1 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">1</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">1</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <!-- 7 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">7</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">7</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	</div>
+	<div class="block month">
+	    <!-- 0 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">0</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">0</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <!-- 7 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">7</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">7</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	</div>
+
+	<div class="block seconds">
+	    <div class="block_left block_">
+	        <div class="block_left_top">
+	            <div class="block_left_top_count _count">3</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_left_bottom">
+	            <div class="block_left_bottom_count _count">3</div>
+	        </div>
+	        <div class="block_effect1 left"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">1</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">1</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	</div>
+			
+</div>
+<div class="EightycloudsFlipTimer" style="">
+	<div class="block days">
+		<!-- 2 -->
+	    <div class="block_left block_">
+	        <div class="block_left_top">
+	            <div class="block_left_top_count _count">2</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_left_bottom">
+	            <div class="block_left_bottom_count _count">2</div>
+	        </div>
+	        <div class="block_effect1 left"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+		<!-- 0 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">0</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">0</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <!-- 1 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">1</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">1</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <!-- 7 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">7</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">7</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	</div>
+	<div class="block month">
+	    <!-- 0 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">0</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">0</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <!-- 7 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">7</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">7</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	</div>
+
+	<div class="block seconds">
+	    <div class="block_left block_">
+	        <div class="block_left_top">
+	            <div class="block_left_top_count _count">3</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_left_bottom">
+	            <div class="block_left_bottom_count _count">3</div>
+	        </div>
+	        <div class="block_effect1 left"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">1</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">1</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	</div>
+
+</div>	
+
+<div class="EightycloudsFlipTimer" style="">
+	<div class="block days">
+		<!-- 2 -->
+	    <div class="block_left block_">
+	        <div class="block_left_top">
+	            <div class="block_left_top_count _count">2</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_left_bottom">
+	            <div class="block_left_bottom_count _count">2</div>
+	        </div>
+	        <div class="block_effect1 left"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+		<!-- 0 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">0</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">0</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <!-- 1 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">1</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">1</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <!-- 7 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">7</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">7</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	</div>
+	<div class="block month">
+	    <!-- 0 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">0</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">0</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <!-- 7 -->
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">7</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">7</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	</div>
+
+	<div class="block seconds">
+	    <div class="block_left block_">
+	        <div class="block_left_top">
+	            <div class="block_left_top_count _count">3</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_left_bottom">
+	            <div class="block_left_bottom_count _count">3</div>
+	        </div>
+	        <div class="block_effect1 left"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	    <div class="block_right block_">
+	        <div class="block_right_top">
+	            <div class="block_right_top_count _count">1</div>
+	        </div>
+	        <div class="block_middle_separator"></div>
+	        <div class="block_right_bottom">
+	            <div class="block_right_bottom_count _count">1</div>
+	        </div>
+	        <div class="block_effect1"></div>
+	        <div class="block_effect2"></div>
+	        <div class="block_effect3"></div>
+	        <div class="block_effect4"></div>
+	    </div>
+	</div>
+
+</div>
+				</div>
+			</div>
+		</div>
+		<!-- 公司信息 -->
+		<div class="copyright">
+			Copyright © 2017 ShuDao  Rights Reserved 
+		</div>
+
+
+
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		
+		console.log("readyed")
+		$(".gongwei").click(function(){
+			console.log($(this).find("img").attr("src"))
+			$(".yuanquan img").attr("src",$(this).find("img").attr("src"))
+			$(".yuanquan div").html($(this).find("img").attr("src").replace("img/",""))
+		})
+	
+	</script>
+</body>
+</html>

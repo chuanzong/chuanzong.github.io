@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>智慧城市研究中心</title>
+	<link rel="stylesheet" href="./css/all.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/style2.css">
+	<style>
+		.bd-intro-list .head i,.bd-report-list>li i{
+			width: 70px;
+			height: 70px;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size:100% 100%;
+		}
+		.bd-intro-list .head i{
+			margin-left:auto;
+			margin-right:auto;
+		}
+		.bd-intro-list li:nth-of-type(1) .head i{
+			background-image: url(./img/icon/icon_1_2.png);			
+		}
+		.bd-intro-list .active:nth-of-type(1) .head i{
+			background-image: url(./img/icon/icon_1_1.png);			
+		}
+		.bd-intro-list li:nth-of-type(2) .head i{
+			background-image: url(./img/icon/icon_2_2.png);			
+		}
+		.bd-intro-list .active:nth-of-type(2) .head i{
+			background-image: url(./img/icon/icon_2_1.png);			
+		}
+		.bd-intro-list li:nth-of-type(3) .head i{
+			background-image: url(./img/icon/icon_3_2.png);			
+		}
+		.bd-intro-list .active:nth-of-type(3) .head i{
+			background-image: url(./img/icon/icon_3_1.png);			
+		}
+		.bd-intro-list .head i:before,.bd-report-list>li i:before{
+			display: none;
+		}
+		.bd-report-list>li:nth-of-type(1) i{
+			background-image: url(./img/icon/icon-t-1.png);	
+		}
+		.bd-report-list>li:nth-of-type(2) i{
+			background-image: url(./img/icon/icon-t-2.png);	
+		}
+		.bd-report-list>li:nth-of-type(3) i{
+			background-image: url(./img/icon/icon-t-3.png);	
+		}
+
+		.yunxin-txt{
+			padding-top: 5%;
+			width: 35%;
+			float: left;
+		}
+		.yunxin-txt>h2{
+			font-size: 30px;
+			font-weight: normal;
+			line-height: 2.8;			
+		}
+		.yunxin-txt>p{
+			font-size: 14px;
+			line-height: 2;
+			padding-bottom: 20px;
+			color: #8c93a0;
+
+		}
+		.yunxin-img{
+			width: 55%;
+			float: right;
+		}
+		.bgbox{
+			background-color: #e0e9f1;
+			overflow: hidden;
+			padding-bottom: 30px;
+		}
+		.index-banner{
+			background-image: -webkit-linear-gradient(135deg, #003073, #029797);
+			background-image: linear-gradient(135deg, #003073, #029797);
+		}
+	</style>
+
+</head>
+<body class="index" id="body">
+
+<!-- header  -->
+<div class="god_header-css">
+	<div class="header-wrap header-wrap-top">
+		<div class="wrap">
+			<a class="nav-logo" href="/">
+				<img id="img2" src="./img/logo.png" width="264" height="44">
+			</a>
+
+			<div class="nav-content">
+				<div class="nav-click-wrap shouye_hover">
+					<a href="./index.html" target="_blank">
+						<span class="nav-click" data-hover="首页">
+							首页
+						</span>
+					</a>
+				</div>
+				<div class="nav-click-wrap shouye_hover">
+					<a href="./produce.html" target="_blank">
+						<span class="nav-click" data-hover="产品介绍">
+							产品介绍
+						</span>
+					</a>
+				</div>
+				<div class="nav-click-wrap shouye_hover">
+					<a href="./case.html" target="_blank">
+						<span class="nav-click" data-hover="案例展示">
+							案例展示
+						</span>
+					</a>
+				</div>
+				<div class="nav-click-wrap shouye_hover">
+					<a href="./about.html" target="_blank">
+						<span class="nav-click" data-hover="关于我们">
+							关于我们
+						</span>
+					</a>
+
+				</div>
+				<div class="nav-click-wrap shouye_hover">
+					<div class="" style="padding: 0 25px;line-height: 60px;">						
+						<a class="bd-btn bd-btn-ghost bd-btn-blue" style="display: inline;">
+							登录
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- 轮播图 -->
+<div class="index-banner">
+	<div class="index-banner-text-wrap banner-0 active">
+		<div class="index-banner-text">
+			<img class="slideUp" src="./img/banner/banner-text-2-1.png" style=""
+			alt="">
+			<div class="split">
+			</div>
+		</div>
+	</div>
+	<div class="index-banner-text-wrap banner-1">
+		<div class="index-banner-text">
+			<img class="slideUp" src="./img/banner/banner-text-1-1.png">
+			<img class="light" src="./img/banner/banner-text-1-2.png">
+			<div class="fade pride">
+				<img src="./img/banner/banner-text-1-3.png">
+			</div>
+			<a href="https://www.qcloud.com/about/news/detail/66" target="_blank"
+			class="banner-link fade">
+				查看详情
+			</a>
+		</div>
+	</div>
+	<div class="index-banner-tabs">
+		<a class="control-active">
+		</a>
+		<a class="">
+		</a>
+	</div>
+	<div id="particles-js" style="height:100%;width:100%;">
+
+	</div>
+</div>
+<!-- 中间文字介绍 -->
+<div class="index-bright">
+	<div class="index-wrap">
+		<ul class="bd-report-list">
+			<li>
+				<a href="https://v.qq.com/x/cover/mojtuwcehkkox22/f0329swv3ed.html" target="_blank">
+					<i class="icon-index-1-1">
+					</i>
+					<p class="index-head">
+						大数据科普
+					</p>
+					<div class="index-desc">
+						3分钟让你了解大数据
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="./about.html" target="_blank">
+					<i class="icon-index-1-2">
+					</i>
+					<p class="index-head">
+						智慧城市介绍
+					</p>
+					<div class="index-desc">
+						智慧城市是一个专业性研究机构
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="./vision.html" target="_blank">
+					<i class="icon-index-1-3">
+					</i>
+					<p class="index-head">
+						发展愿景
+					</p>
+					<div class="index-desc">
+						成为智慧城市领域的“大平台”
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- 开发工具 -->
+<div class="index-shadow">
+	<div class="index-wrap">
+		<div class="index-title">
+			为开发者提供专业、易用、可信赖的大数据产品
+		</div>
+		<ul class="bd-intro-list">
+			<li class="active">
+				<div class="head">
+					<div class="head-inner">
+						<i class="icon-index-2-1">
+						</i>
+						<p class="index-head">
+							分析
+						</p>
+						<p class="index-desc">
+							实时统计、即时分析、清晰呈现
+							<br>
+							降低数据分析门槛，提高产品决策效率
+						</p>
+					</div>
+				</div>
+				<div class="body">
+					<ul class="bd-intro-detail-list">
+						<li>
+							<div class="index-head">
+								<a href="/product/mta">
+									大数据分析
+								</a>
+							</div>
+							<p class="index-desc">
+								稳定高效的推送工具，高性能开源数据库 副本
+							</p>
+						</li>
+						<li>
+							<div class="index-head">
+								<a href="/product/h5">
+									可视化
+								</a>
+							</div>
+							<p class="index-desc">
+								稳定高效的推送工具，高性能开源数据库 副本
+							</p>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="">
+				<div class="head">
+					<div class="head-inner">
+						<i class="icon-index-2-2">
+						</i>
+						<p class="index-head">
+							工具
+						</p>
+						<p class="index-desc">
+							稳定高效的推送工具，高性能开源数据库
+							<br>
+							使您更专注于业务快速开发
+						</p>
+					</div>
+				</div>
+				<div class="body">
+					<ul class="bd-intro-detail-list">
+						<li>
+							<div class="index-head">
+								<a href="/product/xg">
+									大数据采集
+								</a>
+							</div>
+							<p class="index-desc">
+								稳定高效的推送工具，高性能开源数据库
+							</p>
+						</li>
+						<li>
+							<div class="index-head">
+								<a href="https://www.qcloud.com/product/postgresql.html" target="_blank">
+									大数据处理
+								</a>
+							</div>
+							<p class="index-desc">
+								稳定高效的推送工具，高性能开源数据库
+							</p>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="">
+				<div class="head">
+					<div class="head-inner">
+						<i class="icon-index-2-3">
+						</i>
+						<p class="index-head">
+							平台
+						</p>
+						<p class="index-desc">
+							基于PB级数据支撑与千亿级社交关系链
+							<br>
+							让您轻松具备大数据处理与精准推荐能力
+						</p>
+					</div>
+				</div>
+				<div class="body">
+					<ul class="bd-intro-detail-list">
+						<li>
+							<div class="index-head">
+								<a href="https://www.qcloud.com/product/tbds.html" target="_blank">
+									云平台
+								</a>
+							</div>
+							<p class="index-desc">
+								稳定高效的推送工具，高性能开源数据库
+							</p>
+						</li>
+						<li>
+							<div class="index-head">
+								<a href="http://tuijian.qq.com" target="_blank">
+									运维和存储
+								</a>
+							</div>
+							<p class="index-desc">
+								稳定高效的推送工具，高性能开源数据库
+							</p>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!-- 翻页 -->
+<div class="index-bright" style="padding:80px 0;">
+	<div class="index-wrap">
+		<div class="yunxin-txt">
+			<h2 >智能芯云平台</h2>
+			<p>智能芯云平台，是大数据与云计算融为一体，经过优化与 创新，为工业运营的智能化特制流式数据分析平台。提供 启钥式的数据分析解决方案。</p>
+			<p>这个平台具有以下优良特点：<br>高度可扩展性，可靠易维护性，建基于分层协作架构，以 宽广的水平扩展性，支持海量的数据上传和分析。</p>
+		</div>
+		<div class="yunxin-img">
+			<img src="./img/computer.png" alt="">
+		</div>
+	</div>
+</div>
+
+<!-- 案例展示 -->
+<div class="bgbox" style="">
+	<div class="item product">
+		<h1 class="sc">案例展示</h1>
+		<div class="list">
+			<div class="pic">
+				<div class="pic-lock">
+					<a href="/product/solution/40288184596c945b015987a35cda001a" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/6811534479925634.jpg">
+							</dt>
+							<dd>
+								<h3>
+									精准营销数据产品
+								</h3>
+								<p title="结合多维度数据，提供高转化率、低成本、可定制化的精准营销数据服务。">
+									结合多维度数据，提供高转化率、低成本、可定制化的精准营销数据服务。
+								</p>
+							</dd>
+						</dl>
+					</a>
+					<a href="/product/solution/ff808081593ef56001593fab75080046" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/6225531305932863.png">
+							</dt>
+							<dd>
+								<h3>
+									智能交通数据产品
+								</h3>
+								<p title="提供GPS、车辆性能、视频监控等系列智能交通产品，覆盖出租车GPS、公交一卡通、交通监控视频、车流量统计视频、车辆性能规格等数十种大体量交通数据。">
+									提供GPS、车辆性能、视频监控等系列智能交通产品，覆盖出租车GPS、公交一卡通、交通监控视频、车流量统计视频、车辆性能规格等数十种大体量交通数据。
+								</p>
+							</dd>
+						</dl>
+					</a>
+					<a href="/product/solution/ff808081593ef56001593f93e0250034" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/2787464187597162.png">
+							</dt>
+							<dd>
+								<h3>
+									电子商务数据产品
+								</h3>
+								<p title="提供电商交易、电商商铺、电商评论、商品贸易等四大类电子商务数据，包含用户购买行为、电商网站商品信息、商品评论、商品进出口贸易等多维度数据分析。">
+									提供电商交易、电商商铺、电商评论、商品贸易等四大类电子商务数据，包含用户购买行为、电商网站商品信息、商品评论、商品进出口贸易等多维度数据分析。
+								</p>
+							</dd>
+						</dl>
+					</a>
+					<a href="/product/solution/ff808081593ef56001593f860c55002b" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/6208838372754104.png">
+							</dt>
+							<dd>
+								<h3>
+									人脸识别数据产品
+								</h3>
+								<p title="采集欧美、亚非主要人种不同年龄段的人脸图像，通过人脸属性/关键点标注，来验证算法并提高人脸识别准确率。">
+									采集欧美、亚非主要人种不同年龄段的人脸图像，通过人脸属性/关键点标注，来验证算法并提高人脸识别准确率。
+								</p>
+							</dd>
+						</dl>
+					</a>
+					<a href="/product/solution/ff808081592b541a01593e514644004d" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/2787438832687158.png">
+							</dt>
+							<dd>
+								<h3>
+									OCR光学字符识别数据产品
+								</h3>
+								<p title="提供卡片类、手写文字类、场景文字类等OCR识别产品，涵盖名片照片、车牌图像、日韩手写、手写体轨迹、台湾繁体中文刊物、中英文场景文字等多种数据包。">
+									提供卡片类、手写文字类、场景文字类等OCR识别产品，涵盖名片照片、车牌图像、日韩手写、手写体轨迹、台湾繁体中文刊物、中英文场景文字等多种数据包。
+								</p>
+							</dd>
+						</dl>
+					</a>
+					<a href="/product/solution/ff808081592b541a01593e4a8e800034" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/2787575402329866.png">
+							</dt>
+							<dd>
+								<h3>
+									自然语言理解数据产品
+								</h3>
+								<p title="提供文本类、细粒度语义标注、领域知识库等三大类产品，包含twitter微博内容、Facebook纯文本、中文短信、繁体语料、微博句法树库、领域词典等多种原子数据包。">
+									提供文本类、细粒度语义标注、领域知识库等三大类产品，包含twitter微博内容、Facebook纯文本、中文短信、繁体语料、微博句法树库、领域词典等多种原子数据包。
+								</p>
+							</dd>
+						</dl>
+					</a>
+					<a href="/product/solution/ff808081592b541a01593e1a8340002e" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/6225680198995406.png">
+							</dt>
+							<dd>
+								<h3>
+									智能安防数据产品
+								</h3>
+								<p title="涵盖各类监控视频和特定场景下的标注数据，为智能安防系统提供基础数据和构建智能识别算法。">
+									涵盖各类监控视频和特定场景下的标注数据，为智能安防系统提供基础数据和构建智能识别算法。
+								</p>
+							</dd>
+						</dl>
+					</a>
+					<a href="/product/solution/40288184596c945b01598cdafb83002b" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/6836224003071263.png">
+							</dt>
+							<dd>
+								<h3>
+									位置服务数据产品
+								</h3>
+								<p title="采自出租车GPS、公交车GPS、公交车刷卡、地铁刷卡等大体量位置轨迹数据，覆盖全国汽车服务、餐饮服务、购物、生活服务、体育休闲、医疗保健、住宿、商务住宅、风景名胜、交通设施、金融保险、公告设施服务等各行业的POI数据。
+								">
+									采自出租车GPS、公交车GPS、公交车刷卡、地铁刷卡等大体量位置轨迹数据，覆盖全国汽车服务、餐饮服务、购物、生活服务、体育休闲、医疗保健、住宿、商务住宅、风景名胜、交通设施、金融保险、公告设施服务等各行业的POI数据。
+								</p>
+							</dd>
+						</dl>
+					</a>
+					<a href="/product/solution/ff808081593ef56001593f8107c10020" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/2787477787672040.png">
+							</dt>
+							<dd>
+								<h3>
+									基础语音识别数据产品
+								</h3>
+								<p title="采集全球主要语种语料，并筛选出高标准语音数据，搭建沟通桥梁，让智能设备听懂你的心声。">
+									采集全球主要语种语料，并筛选出高标准语音数据，搭建沟通桥梁，让智能设备听懂你的心声。
+								</p>
+							</dd>
+						</dl>
+					</a>
+					<a href="/product/solution/ff808081593ef56001593f45d0d8000f" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/2787562146520568.png">
+							</dt>
+							<dd>
+								<h3>
+									智能语音数据产品
+								</h3>
+								<p title="涵盖普通话、各地方言、地道外语语料，以及专业客服/车载和实网语音数据，助力智能设备打造高精准的智能语音识别系统。">
+									涵盖普通话、各地方言、地道外语语料，以及专业客服/车载和实网语音数据，助力智能设备打造高精准的智能语音识别系统。
+								</p>
+							</dd>
+						</dl>
+					</a>
+					<a href="/product/solution/ff808081593ef56001593f606c510018" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/2787515088931013.png">
+							</dt>
+							<dd>
+								<h3>
+									智能行车数据产品
+								</h3>
+								<p title="基于道路视频、车辆信息和语音数据，实现智能设备的模型生成和深度学习，助推自动/辅助驾驶和车载智能设备的发展。">
+									基于道路视频、车辆信息和语音数据，实现智能设备的模型生成和深度学习，助推自动/辅助驾驶和车载智能设备的发展。
+								</p>
+							</dd>
+						</dl>
+					</a>
+					<a href="/product/solution/ff808081593ef56001593f3cbf960007" target="_blank">
+						<dl>
+							<dt>
+								<img src="./img/solution/2787545643634261.png">
+							</dt>
+							<dd>
+								<h3>
+									智能教育数据产品
+								</h3>
+								<p title="涵盖海量语音及题库数据，为广大中小学生提供精准、有效、个性化的课业辅导。">
+									涵盖海量语音及题库数据，为广大中小学生提供精准、有效、个性化的课业辅导。
+								</p>
+							</dd>
+						</dl>
+					</a>
+				</div>
+				<div class="clear"></div>
+				<a href="./case.html" target="_blank">
+					<div class="more">
+						查看全部
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<!-- 合作伙伴 -->
+<div class="bigDataShouye-css">
+	<div class="partners">
+		<div class="w_c" id="partners_wc">
+			<div class="partners-title1">
+				部分合作伙伴
+			</div>
+			<div class="partners-pic" style="">
+				<div class="unslider-banner partners-banner" id="partners_banner"  style="">
+					<ul class="partners-img">
+						<li class="partners-li">
+							<a class="partners-img-a" style="background-image: url(./img/partners/partner_1.png);" target="_blank"></a>
+						</li>
+						<li class="partners-li">
+							<a class="partners-img-a" style="background-image: url(./img/partners/partner_2.png);" target="_blank"></a>
+						</li>
+						<li class="partners-li">
+							<a class="partners-img-a" style="background-image: url(./img/partners/partner_3.png);" target="_blank"></a>
+						</li>
+						<li class="partners-li">
+							<a class="partners-img-a" style="background-image: url(./img/partners/partner_4.png);" target="_blank"></a>
+						</li>
+						<li class="partners-li">
+							<a class="partners-img-a" style="background-image: url(./img/partners/partner_5.png);" target="_blank"></a>
+						</li>
+						<li class="partners-li">
+							<a class="partners-img-a" style="background-image: url(./img/partners/partner_1.png);" target="_blank"></a>
+						</li>
+						<li class="partners-li">
+							<a class="partners-img-a" style="background-image: url(./img/partners/partner_2.png);" target="_blank"></a>
+						</li>	
+					</ul>
+				</div>
+			</div>
+	        <ul class="car-points-ul" id="partners_car_point">
+	            <li class="partners-car-point" data-th="0"></li>
+	            <li class="partners-car-point active" data-th="1"></li>
+	        </ul>
+		</div>
+	</div>
+</div>
+
+<!-- footer -->
+<div class="website-footer">
+	<footer>
+		<div class="footer-top">
+			<div class="footer-top-wrapper">
+				<div class="footer-top-left">
+					<div class="footer-col-left">
+						<h6>
+							关于智慧城市研究心
+						</h6>
+						<div class="solid">
+						</div>
+						<p style="text-indent:2em;line-height: 22px;">
+						智慧城市研究中心，宗旨是立足浦东、面向全国，为政府和行业提 供智慧城市战略研究、智慧城市指标体系研究和评估，产业与应用专题 研究、解决方案咨询、工程方案设计以及交流合作培训等，愿景是成为 国内智慧城市领域知名综合性研究咨询机构。 
+						</p>					
+					</div>
+					<img src="./img/footer/line.png" style="position: absolute;margin-left: 599px;margin-top: 25px;">
+				</div>
+				<div class="footer-top-right">
+					<div class="footer-col-right">
+						<div class="company-content">
+							<h6>
+								联系我们
+							</h6>
+							<div class="solid-1">
+							</div>
+							<p>
+								<img src="./img/footer/gps.png">
+								地址：上海市浦东新区海科路99号2号楼
+							</p>
+							<p>
+								<img src="./img/footer/phone.png">
+								400-619-XXXX
+							</p>
+							<p>
+								<img src="./img/footer/email.png">
+								XXX@dataXXX.com
+							</p>
+							<p>
+								<img src="./img/footer/web.png">
+								www.XXXXX.com
+							</p>
+						</div>
+						<img class="d-block" src="./img/footer/erweima-1.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>
+				Copyright @ 2016 XXXX Data Tech. All Rights Reserved. 苏ICP备 14046XXX号
+				数据集团 版权所有
+			</p>
+		</div>
+	</footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- <script src="./js/main.js"></script> -->
+	<script src="./js/jquery.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="./js/fot.js"></script>
+
+
+	<script src="./js/three.min.js"></script>
+	<script src="./js/bg.js"></script>
+
+<!-- 	<script src="./js/particles.min.js"></script>
+	<script>
+		particlesJS.load('particles-js', './js/particles.json', function () {});
+		console.log("js")
+	</script> -->
+	
+</body>
+</html>
