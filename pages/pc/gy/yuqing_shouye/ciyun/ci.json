@@ -1,0 +1,187 @@
+{
+    "data": {
+        "senti_word_distri": [
+			{	
+				"senti_type": "neg",
+				"keyword": "养生",
+				"num":414
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "上海小吃",
+				"num":420
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "茶艺",
+				"num":426
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "文化",
+				"num":432
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "科技",
+				"num":438
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "贝多芬",
+				"num":444
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "减肥",
+				"num":450
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "PPT",
+				"num":456
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "萌娃",
+				"num":462
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "中医",
+				"num":468
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "交响乐",
+				"num":474
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "野外生存",
+				"num":480
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "理财",
+				"num":486
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "花鸟画",
+				"num":492
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "食品安全",
+				"num":498
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "美食",
+				"num":504
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "手工艺",
+				"num":510
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "摄影",
+				"num":516
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "智慧城市",
+				"num":522
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "陶艺",
+				"num":528
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "中医",
+				"num":534
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "儿童哮喘",
+				"num":540
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "情绪管理",
+				"num":546
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "网球",
+				"num":552
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "家庭健康",
+				"num":558
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "公民道德",
+				"num":564
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "东方文化",
+				"num":570
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "剪纸艺术",
+				"num":576
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "宇宙之美",
+				"num":582
+			},	
+			{	
+				
+				"senti_type": "neg",
+				"keyword": "互联网金融",
+				"num":588
+			}
+        ]
+    },
+    "return_code": 0,
+    "return_message": ""
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>舆情</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="yq-shou">
+	<div class="yq-wrap">
+		<div class="user">
+			<div class="denglu"></div>
+			<div class="username" >damin</div>
+			<i></i>
+			<ul class="dropdown-menu">
+				<li><a href="#" id="forgetPsw_btn">重置密码 </a></li>
+				<li class="divider"></li>
+				<li><a href="#">退出</a></li>
+			</ul>
+		</div>
+		<div class="yq-header">
+			<h1 class="title">舆情大数据分析</h1>
+			<span class="time">2017/3/1 16:23:14</span>
+			<div class="line-box">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
+		</div>
+		<div class="yq-main" >
+			<div class="conter-left conter">
+				<div class="con-t con" >
+					<div id="juxing" class="echart-all"></div>
+				</div>
+				<div class="con-c con">
+					<div id="sandian"></div>
+				</div>
+				<div class="con-b con">
+					<div class="con-w_2">						
+						<div id="redu_sandian" class="echart-all"></div>
+					</div>
+					<div class="con-w_2">						
+						<div id="shichang_sandian" class="echart-all"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="conter-middle conter">
+				<div class="con-s">
+					<div id="tongji">
+						<div class="shu">
+							<span class="shu-t">全国XXX数据分布</span>
+							<span class="shu-s">786329273</span>
+						</div>
+						<div class="shu">
+							<span class="shu-t">全国XXX数据分布</span>
+							<span class="shu-s">786329273</span>
+						</div>
+						<div class="shu">
+							<span class="shu-t">全国XXX数据分布</span>
+							<span class="shu-s">786329273</span>
+						</div>
+					</div>
+					<div id="diqiu">
+						<div class="diqiu-c"></div>
+					</div>
+				</div>
+				<div class="con-x" >
+					
+				</div>
+			</div>
+
+
+
+			<div class="conter-right conter">
+				<div class="con-t con">
+					<!-- <div id="yuanhuan"></div> -->
+					<div id="wezhi">
+						<div class="wz-h">
+							新上课程/资讯
+						</div>
+						<div class="wz-t">
+							<span class="wz">时间</span>
+							<span class="wz">类别</span>
+							<span class="wz">标题</span>
+							<span class="wz">网址</span>
+						</div>
+						<div class="wz-c">
+							<span class="wz">13:51:36</span>
+							<span class="wz">综合</span>
+							<span class="wz">星期二讲座时间调整</span>
+							<span class="wz">www.XXXX.XXX.XXX.xom</span>
+						</div>
+						<div class="wz-c">
+							<span class="wz">13:51:36</span>
+							<span class="wz">公告</span>
+							<span class="wz">3月16日早7点30版本停机更新公告</span>
+							<span class="wz">www.XXXX.XXX.XXX.xom</span>
+						</div>
+						<div class="wz-c">
+							<span class="wz">13:51:36</span>
+							<span class="wz">课程</span>
+							<span class="wz">开课时间安排</span>
+							<span class="wz">www.XXXX.XXX.XXX.xom</span>
+						</div>
+						<div class="wz-c">
+							<span class="wz">13:51:36</span>
+							<span class="wz">综合</span>
+							<span class="wz">星期二讲座时间调整</span>
+							<span class="wz">www.XXXX.XXX.XXX.xom</span>
+						</div>
+						<div class="wz-c">
+							<span class="wz">13:51:36</span>
+							<span class="wz">公告</span>
+							<span class="wz">3月16日早7点30版本停机更新公告</span>
+							<span class="wz">www.XXXX.XXX.XXX.xom</span>
+						</div>
+						<div class="wz-c">
+							<span class="wz">13:51:36</span>
+							<span class="wz">课程</span>
+							<span class="wz">开课时间安排</span>
+							<span class="wz">www.XXXX.XXX.XXX.xom</span>
+						</div>
+					</div>
+				</div>
+				<div class="con-c con">
+					<div id="zhexian" class="echart-all"></div>
+				</div>
+				<div class="con-b con">
+					<div class="con-w_2" >
+						<div id="ciyun" class="echart-all">
+							<div class="lt_fmPlWord c_floatLeft c_colorG"></div>
+						</div>
+					</div>
+					<div class="con-w_2" >
+						<div id="guanxi" class="echart-all"></div>
+					</div>
+										
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<script src='./ciyun/jquery.js' type="text/javascript" ></script>
+<script src="./ciyun/wcloud.js" type="text/javascript" ></script>
+<script src="./ciyun/ciyun.js" type="text/javascript" ></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/jquery/jquery.js"></script>
+
+<script src="./mychars/echarts.min.js"></script>
+<script src="./mychars/juxing.js"></script>
+<script src="./mychars/redu_sandian.js"></script>
+<script src="./mychars/shichang_sandian.js"></script>
+<script src="./mychars/sandian.js"></script>
+<script src="./mychars/zhexian.js"></script>
+<script src="./mychars/guanxi.js"></script>
+<script src="./mychars/shanghai.js"></script>
+<!-- <script src="./mychars/shanghai_ditu.js"></script> -->
+
+
+
+<script>
+	$(function(){
+		// requestAnimationFrame(shuzhigundong)
+		var shu1 = [786329273,886329273,986329273];
+		var shu2 = 10000;
+
+		function shuzhigundong(){
+			$('.shu-s').each(function(index){
+				if(shu2<shu1[index]){
+					shu2 +=217654;
+					$(this).html(shu2);
+				// console.log($(this).html());
+				}
+			})
+		}
+		function animate() {
+			// requestAnimationFrame( animate );
+			setTimeout(animate,50)
+			shuzhigundong();
+
+		}
+		animate();
+
+		$('.username').click(function(){
+			$('.dropdown-menu').slideToggle(150);
+		})
+	})
+</script>
+
+</body>
+</html>
