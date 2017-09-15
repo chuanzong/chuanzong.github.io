@@ -81,6 +81,18 @@
             loading.innerHTML = "00";
             document.body.appendChild( loading );
 
+			var theNum = [0,0];
+        
+	        function loadingNum(num){
+				num?theNum[1] = num:"";
+	            setTimeout(function(){
+	                theNum[0] +=1;
+	                loading.innerHTML = ("0"+theNum[0]+"%").slice(-3);
+	                if(theNum[0]===theNum[1])return; 
+	                loadingNum()
+	            },50)
+	        }
+
 			function init() {
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
@@ -147,7 +159,7 @@
 					mesh.position.set( 0,-31,0 );
 					myobj.add( mesh );
 					console.log("加载完成1");
-                    loading.innerHTML = "30%";
+                    loadingNum(30)
 					mesh2load()
 
 				} );
@@ -160,7 +172,7 @@
 						mesh.position.set(78.5,-31,0);
 						myobj.add( mesh );
 						console.log("加载完成2");
-                        loading.innerHTML = "60%";
+                        loadingNum(60)
 						mesh3load();
 					} );
 				}
@@ -172,7 +184,7 @@
 						mesh.position.set( 0,0,0 );
 						myobj.add( mesh );
 						console.log("加载完成3");
-                        loading.innerHTML = "90%";
+                        loadingNum(90)
 						
 						mesh4load();
 					} );
@@ -185,7 +197,7 @@
 						mesh.position.set( 0,0,0 );
 						myobj.add( mesh );
                         
-                        loading.innerHTML = "100%";
+                        loadingNum(100)
                         setTimeout(function(){
                             loading.style.display = 'none';
                         },500)
