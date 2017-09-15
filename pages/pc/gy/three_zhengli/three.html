@@ -23,6 +23,20 @@
 				display:block;
 
 			}
+            #loading{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top:0;
+                left: 0;
+                background: #000;
+                /*padding-top:30%;*/
+                color:#00e5e5;
+                font-size: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
 			a { color: skyblue }
 			.button { background:#999; color:#eee; padding:0.2em 0.5em; cursor:pointer }
@@ -61,6 +75,11 @@
 
 			init();
 			
+
+            var loading = document.createElement( 'div' );
+            loading.id = "loading";
+            loading.innerHTML = "00";
+            document.body.appendChild( loading );
 
 			function init() {
 				container = document.createElement( 'div' );
@@ -128,6 +147,7 @@
 					mesh.position.set( 0,-31,0 );
 					myobj.add( mesh );
 					console.log("加载完成1");
+                    loading.innerHTML = "30%";
 					mesh2load()
 
 				} );
@@ -140,6 +160,7 @@
 						mesh.position.set(78.5,-31,0);
 						myobj.add( mesh );
 						console.log("加载完成2");
+                        loading.innerHTML = "60%";
 						mesh3load();
 					} );
 				}
@@ -151,6 +172,7 @@
 						mesh.position.set( 0,0,0 );
 						myobj.add( mesh );
 						console.log("加载完成3");
+                        loading.innerHTML = "90%";
 						
 						mesh4load();
 					} );
@@ -162,9 +184,13 @@
 						var mesh = new THREE.Mesh( geometry, material );
 						mesh.position.set( 0,0,0 );
 						myobj.add( mesh );
-
-						animate();
-						modelLoadEnd();
+                        
+                        loading.innerHTML = "100%";
+                        setTimeout(function(){
+                            loading.style.display = 'none';
+                        },500)
+                        animate();
+                        modelLoadEnd();
 					} );
 				}
 
